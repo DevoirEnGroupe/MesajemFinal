@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.PayementFragment">
+
+
+    <View
+        android:id="@+id/some_id"
+        android:layout_width="158dp"
+        android:layout_height="119dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/ic__309_209" />
+
+    <TextView
+        android:id="@+id/tvmount"
+        android:layout_width="248dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="311dp"
+        android:textColor="#FF9D00"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/montan_2500" />
+
+    <TextView
+        android:id="@+id/tvpay"
+        android:layout_width="193dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="443dp"
+        android:gravity="center"
+        android:text="@string/fason_pou_p"
+        android:textColor="#FF9D00"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/moncash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="492dp"
+        android:background="@drawable/ic__309_10__1_" />
+
+    <View
+        android:id="@+id/natcash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="492dp"
+        android:background="@drawable/ic__309_2011" />
+
+    <Button
+        android:id="@+id/btpayement"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="585dp"
+        android:text="PEYE"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="62dp"
+        android:backgroundTint="#FF9D00" />
+
+
+</RelativeLayout>

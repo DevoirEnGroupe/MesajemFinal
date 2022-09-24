@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic__309_5__1_.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_im1_splash_screen_top.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_im2_splash_screen_bottom.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_received.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/ic_rectangle_37.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/shape_circle.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/shape_rectangle.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/shape_rectangleorang.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/drawable/shape_rectorange.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/layout/activity_list_task.xml" value="0.25" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/layout/activity_send.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajem-winshelo/app/src/main/res/layout/fragment_maps.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/drawable/ic__309_2011.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/drawable/ic_baseline_toggle_off_24.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/layout/activity_delivery_login.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/layout/activity_list_task.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/layout/itemreceived.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/MesajemBekend/app/src/main/res/menu/switchitem.xml" value="0.25" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic__309_10__1_.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic__309_2011.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic__309_209.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic_im1_splash_screen_top.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic_im2_splash_screen_bottom.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic_received.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic_rectangle_37.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic_send.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/drawable/ic_track.xml" value="0.1015" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/activity_details.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/activity_list_task.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/activity_maps.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_confirmation.xml" value="0.15" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_details.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_maps.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_payement.xml" value="0.22" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_received.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_register.xml" value="0.2" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_send.xml" value="0.16" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/fragment_track.xml" value="0.18" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/itemreceived.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/layout/itemsend.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/menu/button_signup.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/menu/menu_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/menu/received_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/menu/send_navigation.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/menu/track_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/FBJL/Downloads/Mesajrm1/app/src/main/res/xml/fileprovider.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1325" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/drawable/shape_circle.xml" value="0.2585" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/drawable/shape_rectangle.xml" value="0.255" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/drawable/shape_rectangleorang.xml" value="0.2585" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/drawable/shape_rectorange.xml" value="0.1645" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_list_task.xml" value="0.264" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_main_delivey.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_received.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_track.xml" value="0.1" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/allrequestitem.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_received.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_navi_deli.xml" value="0.253125" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_navigation.xml" value="0.190625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

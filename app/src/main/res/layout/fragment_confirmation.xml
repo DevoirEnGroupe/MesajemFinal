@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivGif"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="107dp"
+        android:contentDescription="Gif" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvfelisitasyon"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="127dp"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:text="@string/felisitasyo"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/nan_yon_ti_"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="127dp"
+            android:layout_marginEnd="95dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="NAN YON TI TAN KI PA TWO LONG YON AJAN AP PASE REKIPERE DOKIMAN.  MESI PASKE W FE NOU KONFYANS"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bttounen"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="556dp"
+        android:backgroundTint="#FF9D00"
+        android:text="TOUNEN"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mesajem</string>
+    <string name="image">imagetop</string>
+    <string name="transfere_o">tvsplash</string>
+    <string name="non_itiliza">Username</string>
+    <string name="paswod">Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="passwad">Password</string>
+    <string name="adres_koury">Email</string>
+    <string name="voye_dokima">Voye Dokiman</string>
+    <string name="montan_2500">MONTAN: 2500 GOUD</string>
+    <string name="fason_pou_p">FASON POU PEYE</string>
+    <string name="nan_yon_ti_">NAN YON TI TAN KI PA TWO LONG YON AJAN AP PASE REKIPERE DOKIMAN.  MESI PASKE W FE NOU KONFYANS</string>
+    <string name="felisitasyo">FELISITASYON OU RIVE PEYE</string>
+    <string name="resevwa_dok">RESEVWA DOKIMAN</string>
+    <string name="resevwa_dok1">DOKIMAN MWEN VOYE</string>
+    <string name="pending">NOT YET</string>
+    <string name="transit">TRANSIT</string>
+    <string name="transit_ok">OK</string>
+    <string name="checkable">DELIVERY MAN</string>
+</resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="48dp"
+        app:srcCompat="@drawable/mesajem_logo_final" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="262dp"
+        android:layout_height="436dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-126dp"
+        android:layout_marginTop="513dp"
+        android:layout_marginEnd="306dp"
+        android:layout_marginBottom="-154dp"
+        app:srcCompat="@drawable/assest" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="292dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="-81dp"
+        android:layout_marginEnd="-83dp"
+        android:layout_marginBottom="519dp"
+        app:srcCompat="@drawable/assest" />
+
+    <TextView
+        android:id="@+id/tvkodsekre1"
+        android:layout_width="93dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="360dp"
+        android:gravity="top"
+        android:text="@string/passwad"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvkodsekre2"
+        android:layout_width="204dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="430dp"
+        android:gravity="top"
+        android:text="Confirm password"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvimel"
+        android:layout_width="136dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="290dp"
+        android:gravity="top"
+        android:text="@string/adres_koury"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvnon"
+        android:layout_width="244dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="220dp"
+        android:gravity="top"
+        android:text="@string/non_itiliza"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etnon"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="30dp"
+        android:drawableRight="@drawable/ic_baseline_person_24"
+        android:drawablePadding="20dp"
+        android:hint="username"
+        android:inputType="" />
+
+    <EditText
+        android:id="@+id/etimel"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="30dp"
+        android:drawableRight="@drawable/ic_baseline_mail_24"
+        android:drawablePadding="20dp"
+        android:hint="email"
+        android:inputType="" />
+
+    <EditText
+        android:id="@+id/etkodsekre1"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="30dp"
+        android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:inputType="" />
+
+    <EditText
+        android:id="@+id/etkodsekre2"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="30dp"
+        android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:hint="Confirm Password"
+        android:inputType="" />
+
+    <Button
+        android:id="@+id/btKonekte1"
+        android:layout_width="180dp"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="527dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#F9A826"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:text="CONTINUE"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="30dp" />
+
+    <TextView
+        android:id="@+id/tvlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginBottom="41dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:text="Sing In"
+        android:textColor="@color/Orange"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginBottom="41dp"
+        android:text="Already Have an account? "
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="34dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="176dp"
+        android:text="Create Account"
+        android:textColor="@color/Blue"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

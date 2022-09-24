@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/relativ"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SendActivity">
+
+
+
+    <Button
+        android:id="@+id/ButtonTakePic"
+        android:layout_width="224dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="85dp"
+        android:text="pran foto/kontinye"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="650dp"
+        android:backgroundTint ="#F9A826"/>
+    <TextView
+        android:id="@+id/tvDocSend"
+        android:layout_width="130dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="135dp"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="210dp"
+        android:text="@string/voye_dokima"
+        android:gravity="top"
+        />
+
+    <RelativeLayout
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDocSend">
+
+
+        <ImageView
+            android:id="@+id/PostImage"
+            android:layout_width="152dp"
+            android:layout_height="123dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="120dp"
+            tools:srcCompact="@tools:sample/avatars" />
+
+        <RelativeLayout
+            android:id="@+id/form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PostImage">
+
+            <TextView
+                android:id="@+id/tvimel"
+                android:layout_width="93dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="140dp"
+                android:gravity="top"
+                android:text="imel" />
+
+            <TextView
+                android:id="@+id/tvaddresse"
+                android:layout_width="93dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="210dp"
+                android:gravity="top"
+                android:text="adress" />
+
+            <TextView
+                android:id="@+id/tvsiyati"
+                android:layout_width="136dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="65dp"
+                android:gravity="top"
+                android:text="siyati" />
+
+            <TextView
+                android:id="@+id/tvnon"
+                android:layout_width="244dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="45dp"
+                android:gravity="top"
+                android:text="non" />
+
+            <EditText
+                android:id="@+id/etnon"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:hint="non"
+                android:inputType="" />
+
+            <EditText
+                android:id="@+id/etsiyati"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="90dp"
+                android:hint="siyati"
+                android:inputType="" />
+
+            <EditText
+                android:id="@+id/etimel"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="160dp"
+                android:hint="imel"
+                android:inputType="" />
+
+            <EditText
+                android:id="@+id/etadress"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="230dp"
+                android:hint="adress"
+                android:inputType="" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/send_id"
+        android:layout_width="215dp"
+        android:layout_height="162dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/ic_send" />
+
+
+</RelativeLayout>

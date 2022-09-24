@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativ"
+    tools:context=".Activities.ListTaskActivity"
+   >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        app:layout_scrollFlags="scroll|enterAlways"
+        >
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/FirstRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="149dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="9dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/shape_rectangle"
+            android:padding="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="14dp"
+                android:text="SEND A DOCUMENT "
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/sendNavigation"
+            android:layout_width="149dp"
+            android:layout_height="99dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="-11dp"
+            android:contentDescription="send"
+            android:src="@drawable/track2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/SecondRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FirstRel"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="9dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/shape_rectangleorang"
+            android:padding="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="24dp"
+                android:text="RECEIVE A DOCUMENT"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/receivedNavigation"
+            android:layout_width="149dp"
+            android:layout_height="99dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-11dp"
+            android:layout_marginRight="9dp"
+            android:contentDescription="send"
+            android:src="@drawable/track" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ThirdRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SecondRel"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="9dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/shape_rectangle"
+            android:padding="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="14dp"
+                android:text="TRACK DOCUMENT"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/TrackNavigation"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="-11dp"
+            android:contentDescription="send"
+            android:src="@drawable/track" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/rectangle_3"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/ic_rectangle_37">
+
+
+    </View>
+
+</RelativeLayout>
