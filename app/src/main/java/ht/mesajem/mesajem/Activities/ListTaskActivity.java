@@ -89,7 +89,7 @@ public class ListTaskActivity extends AppCompatActivity {
 
         if(item.getItemId()== R.id.checkable_menu) {
             ParseQuery<Delivery> query = ParseQuery.getQuery(Delivery.class);
-            query.include(Delivery. KEY_USER);
+            query.include(Delivery.KEY_STATUS);
             query.findInBackground(new FindCallback<Delivery>() {
                 @Override
                 public void done(List<Delivery> deliverys, ParseException e) {

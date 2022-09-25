@@ -19,6 +19,9 @@ public class Delivery extends ParseObject {
     public static final String KEY_FULLNAME = "fullname";
 
 
+
+
+
     public Delivery(){
 
     }
@@ -40,5 +43,5 @@ public class Delivery extends ParseObject {
     }
 
     public Boolean getStatus(){return  getBoolean(KEY_STATUS);}
-    public void setStatus(Boolean satus){put(KEY_STATUS,satus);}
+    public void setStatus(Boolean status){put(KEY_STATUS,status);}
 }

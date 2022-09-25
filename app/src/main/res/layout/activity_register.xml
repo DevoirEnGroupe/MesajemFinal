@@ -7,6 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".Activities.RegisterActivity">
 
+    <EditText
+        android:id="@+id/etfullname"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tvnon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="31dp"
+        android:drawableRight="@drawable/ic_baseline_person_24"
+        android:drawablePadding="20dp"
+        android:hint="Full name"
+        android:inputType="" />
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="100dp"
@@ -45,100 +60,109 @@
         android:layout_marginBottom="519dp"
         app:srcCompat="@drawable/assest" />
 
-    <TextView
-        android:id="@+id/tvkodsekre1"
-        android:layout_width="93dp"
-        android:layout_height="20dp"
+    <EditText
+        android:id="@+id/etkodsekre2"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tvkodsekre2"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="360dp"
-        android:gravity="top"
-        android:text="@string/passwad"
-        android:textStyle="bold" />
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="30dp"
+        android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:hint="Confirm Password"
+        android:inputType="" />
 
     <TextView
-        android:id="@+id/tvkodsekre2"
-        android:layout_width="204dp"
-        android:layout_height="35dp"
+        android:id="@+id/tvnon"
+        android:layout_width="244dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="430dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="61dp"
         android:gravity="top"
-        android:text="Confirm password"
+        android:text="@string/non_itiliza"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvimel"
         android:layout_width="136dp"
         android:layout_height="20dp"
+        android:layout_below="@+id/etnon"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="5dp"
         android:gravity="top"
         android:text="@string/adres_koury"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvnon"
-        android:layout_width="244dp"
-        android:layout_height="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="220dp"
-        android:gravity="top"
-        android:text="@string/non_itiliza"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/etnon"
-        android:layout_width="360dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="30dp"
-        android:drawableRight="@drawable/ic_baseline_person_24"
-        android:drawablePadding="20dp"
-        android:hint="username"
-        android:inputType="" />
 
     <EditText
         android:id="@+id/etimel"
         android:layout_width="360dp"
         android:layout_height="45dp"
+        android:layout_below="@+id/tvimel"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="310dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="30dp"
         android:drawableRight="@drawable/ic_baseline_mail_24"
         android:drawablePadding="20dp"
         android:hint="email"
         android:inputType="" />
 
+    <TextView
+        android:id="@+id/tvkodsekre1"
+        android:layout_width="93dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/etimel"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:text="@string/passwad"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/etkodsekre1"
         android:layout_width="360dp"
         android:layout_height="45dp"
+        android:layout_below="@+id/tvkodsekre1"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="30dp"
         android:drawableRight="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
         android:hint="Password"
         android:inputType="" />
 
+    <TextView
+        android:id="@+id/tvkodsekre2"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etkodsekre1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:text="Confirm password"
+        android:textStyle="bold" />
+
     <EditText
-        android:id="@+id/etkodsekre2"
+        android:id="@+id/etnon"
         android:layout_width="360dp"
         android:layout_height="45dp"
+        android:layout_below="@+id/tvnon"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="450dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="30dp"
-        android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:drawableRight="@drawable/ic_baseline_person_24"
         android:drawablePadding="20dp"
-        android:hint="Confirm Password"
+        android:hint="username"
         android:inputType="" />
 
     <Button
@@ -150,7 +174,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="false"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="527dp"
+        android:layout_marginTop="568dp"
         android:layout_marginEnd="28dp"
         android:backgroundTint="#F9A826"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
@@ -208,6 +232,16 @@
         android:textColor="@color/Blue"
         android:textSize="32sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvfullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="1dp"
+        android:text="Full name" />
 
 
 </RelativeLayout>
