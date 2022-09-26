@@ -28,10 +28,11 @@
                 android:layout_height="24dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="127dp"
-                android:layout_marginTop="260dp"
+                android:layout_marginStart="131dp"
+                android:layout_marginTop="228dp"
                 android:gravity="center"
-                android:text="@string/resevwa_dok" />
+                android:text="@string/resevwa_dok"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
