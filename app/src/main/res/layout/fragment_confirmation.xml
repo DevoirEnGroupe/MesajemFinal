@@ -10,9 +10,10 @@
         android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="107dp"
-        android:layout_marginEnd="107dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="104dp"
         android:layout_marginBottom="107dp"
         android:contentDescription="Gif" />
 
@@ -37,11 +38,11 @@
 
         <TextView
             android:id="@+id/nan_yon_ti_"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginStart="127dp"
-            android:layout_marginEnd="95dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="95dp"
             android:gravity="center"
             android:justificationMode="inter_word"
             android:text="NAN YON TI TAN KI PA TWO LONG YON AJAN AP PASE REKIPERE DOKIMAN.  MESI PASKE W FE NOU KONFYANS"
@@ -60,7 +61,7 @@
         android:layout_marginStart="158dp"
         android:layout_marginTop="556dp"
         android:backgroundTint="#FF9D00"
-        android:text="TOUNEN"
+        android:text="GET BACK"
         android:textColor="@color/black"
         android:textStyle="bold" />
 

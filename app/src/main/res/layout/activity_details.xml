@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/postimdet"
-        android:layout_width="284dp"
-        android:layout_height="263dp"
+        android:layout_width="411dp"
+        android:layout_height="344dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="305dp" />
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="258dp" />
 
     <TextView
         android:id="@+id/idpostdet"
@@ -22,8 +22,8 @@
         android:layout_height="18dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="147dp"
         android:gravity="top"
         android:hint="abf" />
 
@@ -33,17 +33,9 @@
         android:layout_height="18dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="175dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="187dp"
         android:gravity="top"
         android:hint="edp_jean_je" />
-
-    <View
-        android:id="@+id/rectangle_3"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:background="@drawable/ic_rectangle_37" />
 
 </RelativeLayout>

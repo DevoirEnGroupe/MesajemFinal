@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/relativ"
     tools:context=".Activities.ListTaskActivity"
-   >
+      >
 
 
     <androidx.appcompat.widget.Toolbar
@@ -22,7 +22,7 @@
         android:id="@+id/FirstRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="149dp"
+        android:layout_marginTop="250dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
@@ -150,15 +150,30 @@
 
     </RelativeLayout>
 
-    <View
-        android:id="@+id/rectangle_3"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:background="@drawable/ic_rectangle_37">
+    <TextView
+        android:id="@+id/tvusernameShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="168dp"
+        android:layout_toEndOf="@+id/textView8"
+        android:text="Client Name"
+        android:textColor="@color/Orange"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-
-    </View>
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="167dp"
+        android:text="Hello,"
+        android:textColor="@color/Orange"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

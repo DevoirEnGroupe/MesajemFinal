@@ -17,7 +17,6 @@
         />
 
 
-
     <ImageView
         android:id="@+id/postuser"
         android:layout_width="70dp"
@@ -43,9 +42,8 @@
         android:layout_width="220dp"
         android:layout_height="15dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="26dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        />
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="70dp" />
 
 </RelativeLayout>

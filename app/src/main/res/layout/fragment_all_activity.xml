@@ -19,31 +19,33 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="-1dp"
+                android:layout_marginTop="0dp"
                 android:background="@drawable/track2" />
 
             <TextView
                 android:id="@+id/tvreceive"
-                android:layout_width="160dp"
-                android:layout_height="24dp"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="131dp"
-                android:layout_marginTop="228dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="192dp"
                 android:gravity="center"
                 android:text="@string/resevwa_dok"
+                android:textColor="@color/Blue"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
 
         </RelativeLayout>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_below="@+id/RvLt"
-            android:id="@+id/rvPosts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            android:padding="8dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPosts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RvLt"
+        android:clipToPadding="false"
+        android:padding="2dp" />
 
 </RelativeLayout>

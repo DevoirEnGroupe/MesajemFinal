@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -35,6 +36,8 @@ public class ListTaskActivity extends AppCompatActivity {
     RelativeLayout trackNavigation;
     RelativeLayout  sendNavigation;
     RelativeLayout receivedNavigation;
+    TextView tvUsername;
+    ParseUser currentuser = ParseUser.getCurrentUser();
     String TAG = "ListTaskActivity";
 
 
@@ -47,6 +50,12 @@ public class ListTaskActivity extends AppCompatActivity {
         trackNavigation = findViewById(R.id.ThirdRel);
         sendNavigation = findViewById(R.id.FirstRel);
         receivedNavigation = findViewById(R.id.SecondRel);
+        tvUsername = findViewById(R.id.tvusernameShow);
+
+        tvUsername.setText(currentuser.getUsername());
+
+
+
 
         sendNavigation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,4 +146,6 @@ public class ListTaskActivity extends AppCompatActivity {
         AlertDialog ok = builder.create();
         ok.show();
     }
+
+
 }
