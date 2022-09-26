@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.PayementFragment">
 
 
     <View
         android:id="@+id/some_id"
-        android:layout_width="158dp"
-        android:layout_height="119dp"
+        android:layout_width="412dp"
+        android:layout_height="255dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/ic__309_209" />
 
     <TextView
@@ -24,21 +24,22 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="311dp"
-        android:textColor="#FF9D00"
-        android:textStyle="bold"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="360dp"
         android:gravity="center"
-        android:text="@string/montan_2500" />
+        android:text="@string/montan_2500"
+        android:textColor="#FF9D00"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvpay"
         android:layout_width="193dp"
         android:layout_height="35dp"
+        android:layout_below="@+id/tvmount"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="443dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="38dp"
         android:gravity="center"
         android:text="@string/fason_pou_p"
         android:textColor="#FF9D00"
@@ -46,38 +47,43 @@
 
     <View
         android:id="@+id/moncash"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="89dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/btpayement"
+        android:layout_below="@+id/tvpay"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="492dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="43dp"
         android:background="@drawable/ic__309_10__1_" />
 
     <View
         android:id="@+id/natcash"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/btpayement"
+        android:layout_below="@+id/tvpay"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="222dp"
-        android:layout_marginTop="492dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="42dp"
         android:background="@drawable/ic__309_2011" />
 
     <Button
         android:id="@+id/btpayement"
         android:layout_width="230dp"
-        android:layout_height="49dp"
+        android:layout_height="58dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="585dp"
-        android:text="PEYE"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#FF9D00"
+        android:text="PAY"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="62dp"
-        android:backgroundTint="#FF9D00" />
+        app:cornerRadius="15dp" />
 
 
 </RelativeLayout>

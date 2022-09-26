@@ -21,6 +21,7 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 
 import java.util.List;
@@ -88,8 +89,10 @@ public class ListTaskActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if(item.getItemId()== R.id.checkable_menu) {
+            ParseUser currentuser = ParseUser.getCurrentUser();
             ParseQuery<Delivery> query = ParseQuery.getQuery(Delivery.class);
-            query.include(Delivery.KEY_STATUS);
+            query.include(Delivery.KEY_USER);
+
             query.findInBackground(new FindCallback<Delivery>() {
                 @Override
                 public void done(List<Delivery> deliverys, ParseException e) {

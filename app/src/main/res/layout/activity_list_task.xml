@@ -12,13 +12,11 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
+        android:minHeight="?attr/actionBarSize"
         app:layout_scrollFlags="scroll|enterAlways"
-        >
-    </androidx.appcompat.widget.Toolbar>
+        app:titleTextColor="@android:color/white"></androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:id="@+id/FirstRel"
@@ -59,7 +57,7 @@
             android:layout_marginLeft="9dp"
             android:layout_marginTop="-11dp"
             android:contentDescription="send"
-            android:src="@drawable/track2" />
+            android:src="@drawable/track3" />
 
     </RelativeLayout>
 
@@ -104,7 +102,7 @@
             android:layout_marginTop="-11dp"
             android:layout_marginRight="9dp"
             android:contentDescription="send"
-            android:src="@drawable/track" />
+            android:src="@drawable/track2" />
 
     </RelativeLayout>
 
@@ -148,7 +146,7 @@
             android:layout_marginLeft="9dp"
             android:layout_marginTop="-11dp"
             android:contentDescription="send"
-            android:src="@drawable/track" />
+            android:src="@drawable/track2" />
 
     </RelativeLayout>
 
