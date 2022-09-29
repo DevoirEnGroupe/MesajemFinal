@@ -107,9 +107,6 @@ public class ListAllTaskFrangment extends Fragment {
 
         tvUsername.setText(currentuser.getUsername());
 
-
-
-
         sendNavigation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

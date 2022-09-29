@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemview"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
 
 
-        <TextView
-            android:id="@+id/objectid"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:layout_marginStart="26dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:gravity="top"
-             />
-
+    <TextView
+        android:id="@+id/objectid"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="78dp"
+        android:gravity="top"
+        android:hint="Object ID" />
 
     <TextView
         android:id="@+id/statusDoc"
@@ -24,8 +23,8 @@
         android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
         android:gravity="top" />
 
     <ImageView
@@ -36,25 +35,24 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="330dp" />
 
-        <TextView
-            android:id="@+id/userexped"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="50dp"
-             />
+    <TextView
+        android:id="@+id/userexped"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="50dp" />
 
-        <TextView
-            android:id="@+id/datedepart"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="26dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="70dp"
-            />
+    <TextView
+        android:id="@+id/datedepart"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="73dp"
+        android:hint="Date de deoart" />
 
     <TextView
         android:id="@+id/datereceived"
@@ -62,8 +60,8 @@
         android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="60dp" />
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="42dp" />
 
 
 </RelativeLayout>
