@@ -1,6 +1,5 @@
 package ht.mesajem.mesajem.Activities;
 
-import static androidx.fragment.app.FragmentManager.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -81,8 +80,68 @@ public class ListTaskActivity extends AppCompatActivity {
         });
         bottomNavigation.setSelectedItemId(R.id.action_home);
 
-
-
-
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.switchitem,menu);
+        return  true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId()== R.id.checkable_menu) {
+            ParseUser currentuser = ParseUser.getCurrentUser();
+            ParseQuery<Delivery> query = ParseQuery.getQuery(Delivery.class);
+            query.include(Delivery.KEY_USER);
+
+            query.findInBackground(new FindCallback<Delivery>() {
+                @Override
+                public void done(List<Delivery> deliverys, ParseException e) {
+
+                    for(Delivery delivery:deliverys){
+
+                        if (e == null) {
+                            if(delivery.getStatus().equals(true) && delivery.getUserd().getObjectId().equals(currentuser.getObjectId())) {
+                                showAlert("DELIVERY MAN", "WELCOME" + delivery.getStatus());
+                                Intent intent = new Intent(ListTaskActivity.this, MainDeliveyActivity.class);
+                                startActivity(intent);
+                            }
+
+                            else {
+
+                                showAlert("DELIVERY MAN", "SORRY YOU'RE NOT A MESAJEM DELIVERY IF YOU WANNA BECOME A DELIVERY" +"PLEASE CONTACT US" + delivery.getStatus());
+                            }
+                        }
+
+
+                    }
+
+                }
+            });
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+    private void showAlert(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", (dialog, which) -> {
+                    dialog.cancel();
+                    // don't forget to change the line below with the names of your Activities
+
+                });
+        AlertDialog ok = builder.create();
+        ok.show();
+    }
+
 }
