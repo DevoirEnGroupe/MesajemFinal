@@ -9,171 +9,21 @@
     tools:context=".Activities.ListTaskActivity"
       >
 
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_scrollFlags="scroll|enterAlways"
-        app:titleTextColor="@android:color/white"></androidx.appcompat.widget.Toolbar>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_track"
+        android:background="@color/Orange"
+        />
 
-    <RelativeLayout
-        android:id="@+id/FirstRel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="9dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="31dp"
-            android:background="@drawable/shape_rectangle"
-            android:padding="9dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="14dp"
-                android:text="SEND A DOCUMENT "
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/sendNavigation"
-            android:layout_width="149dp"
-            android:layout_height="99dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="9dp"
-            android:layout_marginTop="-11dp"
-            android:contentDescription="send"
-            android:src="@drawable/track3" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/SecondRel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/FirstRel"
-        android:layout_marginTop="1dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="9dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="31dp"
-            android:background="@drawable/shape_rectangleorang"
-            android:padding="9dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="24dp"
-                android:text="RECEIVE A DOCUMENT"
-                android:textColor="@color/white"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/receivedNavigation"
-            android:layout_width="149dp"
-            android:layout_height="99dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="-11dp"
-            android:layout_marginRight="9dp"
-            android:contentDescription="send"
-            android:src="@drawable/track2" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/ThirdRel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/SecondRel"
-        android:layout_marginTop="1dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="9dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="31dp"
-            android:background="@drawable/shape_rectangle"
-            android:padding="9dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="14dp"
-                android:text="TRACK DOCUMENT"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/TrackNavigation"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="9dp"
-            android:layout_marginTop="-11dp"
-            android:contentDescription="send"
-            android:src="@drawable/track2" />
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/tvusernameShow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="168dp"
-        android:layout_toEndOf="@+id/textView8"
-        android:text="Client Name"
-        android:textColor="@color/Orange"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="167dp"
-        android:text="Hello,"
-        android:textColor="@color/Orange"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
 </RelativeLayout>

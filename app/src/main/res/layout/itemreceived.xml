@@ -17,17 +17,16 @@
             android:gravity="top"
              />
 
+
     <TextView
         android:id="@+id/statusDoc"
         android:layout_width="115dp"
         android:layout_height="15dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="150dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:gravity="top"
-        />
-
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="31dp"
+        android:gravity="top" />
 
     <ImageView
         android:id="@+id/postuser"
@@ -35,8 +34,7 @@
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginStart="330dp" />
 
         <TextView
             android:id="@+id/userexped"
@@ -64,9 +62,8 @@
         android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="70dp" />
-
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="60dp" />
 
 
 </RelativeLayout>

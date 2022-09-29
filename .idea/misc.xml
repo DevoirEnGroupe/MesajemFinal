@@ -69,6 +69,26 @@
         <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/Shon/AndroidStudioProjects/Mesajem-bekendf-C/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_8309_4.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic__309_10__1_.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic__309_2011.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic__309_209.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic__309_5__1_.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_switch_right_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_baseline_toggle_off_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_im1_splash_screen_top.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_received.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_rectangle_37.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_send.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_track.xml" value="0.2595" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/shape_rectangle.xml" value="0.1625" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_delivery_login.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_details.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_list_task.xml" value="0.2" />
@@ -82,14 +102,19 @@
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/allrequestitem.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_all_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_all_request.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_calcul.xml" value="0.1" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_confirmation.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_details.xml" value="0.4" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_details.xml" value="0.264" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_list_all_task_frangment.xml" value="0.4" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_maps.xml" value="0.14356884057971014" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_my_request.xml" value="0.14356884057971014" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_payement.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_profil.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_received.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/fragment_send.xml" value="0.14356884057971014" />
-        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/itemreceived.xml" value="0.4" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/itemreceived.xml" value="0.264" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/switch_item.xml" value="0.152" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_nav_track.xml" value="0.1" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_navi_deli.xml" value="0.253125" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_navigation.xml" value="0.190625" />
       </map>
