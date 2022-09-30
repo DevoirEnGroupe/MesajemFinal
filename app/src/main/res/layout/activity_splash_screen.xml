@@ -21,7 +21,7 @@
         android:clipToOutline="true"
         android:contentDescription="@string/image"
         android:elevation="10dp"
-        android:foreground="@drawable/mesajem_logo_final"
+        android:foreground="@drawable/logo_m_final"
         android:outlineSpotShadowColor="@color/black" />
 
     <TextView

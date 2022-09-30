@@ -37,4 +37,7 @@ public class DetailsActivity extends AppCompatActivity {
         Glide.with(this).load(post.getKeyImage().getUrl()).override(70,70).into(postimdet);
 
     }
+
+
+
 }
