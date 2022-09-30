@@ -91,7 +91,7 @@
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/ic_track.xml" value="0.2595" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/drawable/shape_rectangle.xml" value="0.1625" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_delivery_login.xml" value="0.21979166666666666" />
-        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_details.xml" value="0.136" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_details.xml" value="0.264" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_list_task.xml" value="0.2" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/layout/activity_main_delivey.xml" value="0.25416666666666665" />
@@ -120,6 +120,7 @@
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_nav_track.xml" value="0.1" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_navi_deli.xml" value="0.253125" />
         <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/bottom_navigation.xml" value="0.190625" />
+        <entry key="..\:/Users/Shon/Downloads/Mesajem-bekendf/app/src/main/res/menu/top_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

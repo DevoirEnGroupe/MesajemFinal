@@ -9,8 +9,8 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/action_compose"
-        android:icon="@android:drawable/ic_menu_add"
-        android:title="Take Picture"
+        android:icon="@drawable/ic_baseline_folder_24"
+        android:title="Doc Recieved"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_profile"
