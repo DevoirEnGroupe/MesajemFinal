@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -111,6 +112,7 @@ public class AllRequestFragment extends Fragment {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
         query.setLimit(20);
+        query.whereEqualTo("post", null);
         query.addDescendingOrder(Post.KEY_CREATED_AT);
         query.findInBackground(new FindCallback<Post>() {
             @Override
@@ -119,6 +121,7 @@ public class AllRequestFragment extends Fragment {
                 if(e == null){
                     adapter.clear();
                     adapter.addAll(posts);
+
 
                 }
                 if(mFirstLoad){

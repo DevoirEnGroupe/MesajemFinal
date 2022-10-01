@@ -1,8 +1,5 @@
 package ht.mesajem.mesajem.Models;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseGeoPoint;
@@ -31,10 +28,9 @@ public class Post extends ParseObject {
     public static final String KEY_EMAIL = "email";
     public static final String KEY_ADDRESSE = "addresse";
     public static final String KEY_POST_ACC = "postaccept";
+    public static final String KEY_POST = "post";
 
-    public Post(){
 
-    }
 
 
     public ParseFile getKeyImage(){
@@ -66,13 +62,13 @@ public class Post extends ParseObject {
         put(KEY_ARRIVE_DATE, arrivedate);
     }
     public Date getEstimatedate(){
-            return  getDate(KEY_ESTIMATE_DATE);
-        }
-        public void setEstimatedate(Date estimatedate) {
-            put(KEY_ESTIMATE_DATE, estimatedate);
-        }
+        return  getDate(KEY_ESTIMATE_DATE);
+    }
+    public void setEstimatedate(Date estimatedate) {
+        put(KEY_ESTIMATE_DATE, estimatedate);
+    }
 
-            public Number getStatus(){
+    public Number getStatus(){
         return getNumber(KEY_STATUS);
     }
     public void setStatus(Number status){
@@ -92,9 +88,15 @@ public class Post extends ParseObject {
     public String getAddresse(){
         return getString(KEY_ADDRESSE);
     }
+    public String getPostacc(){
+        return getString(KEY_POST);
+    }
 
     public void setFullname(String nom){
         put(KEY_FULL_NAME,nom);
+    }
+    public void setPostacc(String post){
+        put(KEY_POST,post);
     }
 
     public void setPrenom(String institut){
@@ -117,12 +119,6 @@ public class Post extends ParseObject {
     public void setLocation(ParseGeoPoint location){
         put(KEY_LOCATION,location);
     }
-    public ParseObject getPostaccept(){
-        return getParseObject(KEY_POST_ACC);
-    }
 
-    public void setPostaccept(ParseObject postaccept){
-        put(KEY_POST_ACC,postaccept);
-    }
 
 }
