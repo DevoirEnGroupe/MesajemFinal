@@ -15,8 +15,9 @@
     <string name="felisitasyo">FELISITASYON OU RIVE PEYE</string>
     <string name="resevwa_dok">ALL PACKAGES</string>
     <string name="resevwa_dok1">DOKIMAN MWEN VOYE</string>
-    <string name="pending">NOT YET</string>
-    <string name="transit">TRANSIT</string>
-    <string name="transit_ok">OK</string>
+    <string name="pending">ORDER PLACED</string>
+    <string name="order">ORDER PACKED</string>
+    <string name="transit">ON THE WAY</string>
+    <string name="deliver">ON THE WAY</string>
     <string name="checkable">DELIVERY MAN</string>
 </resources>

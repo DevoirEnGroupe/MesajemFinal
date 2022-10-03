@@ -27,8 +27,8 @@ public class Post extends ParseObject {
     public static final String KEY_INSTITUT = "institutname";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_ADDRESSE = "addresse";
-    public static final String KEY_POST_ACC = "postaccept";
     public static final String KEY_POST = "post";
+    public static final String KEY_ON_THE_GROUND_DATE ="onthegrounddate";
 
 
 
@@ -118,6 +118,13 @@ public class Post extends ParseObject {
     }
     public void setLocation(ParseGeoPoint location){
         put(KEY_LOCATION,location);
+    }
+
+    public Date getOntheground(){
+        return  getDate(KEY_ON_THE_GROUND_DATE);
+    }
+    public void setOntheground(Date ontheground){
+        put(KEY_ON_THE_GROUND_DATE,ontheground);
     }
 
 

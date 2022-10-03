@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ht.mesajem.mesajem.Adapters.AllRequestAdapter;
+import ht.mesajem.mesajem.Adapters.MyRequestAdapter;
 import ht.mesajem.mesajem.Models.Delivery;
 import ht.mesajem.mesajem.Models.Post;
 import ht.mesajem.mesajem.R;
@@ -46,7 +47,7 @@ public class MyRequestFragment extends Fragment {
 
     ImageView imageD;
     RecyclerView rvPosts;
-    AllRequestAdapter adapter;
+    MyRequestAdapter adapter;
     List<Post> posts;
     Boolean mFirstLoad;
     TextView tvreceive;
@@ -96,7 +97,7 @@ public class MyRequestFragment extends Fragment {
         tvreceive = view.findViewById(R.id.tvreceive);
 
         posts = new ArrayList<>();
-        adapter = new AllRequestAdapter(posts,getContext());
+        adapter = new MyRequestAdapter(posts,getContext());
         rvPosts.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         rvPosts.setLayoutManager(layoutManager);

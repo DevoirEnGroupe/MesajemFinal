@@ -111,13 +111,17 @@ public class SenderAdapter extends RecyclerView.Adapter<SenderAdapter.ViewHolder
                     statusDoc.setText(R.string.pending);
                 }
                 else if(post.getStatus().equals(1)){
+                    statusDoc.setText(R.string.order);
+                }
+                else if(post.getStatus().equals(2)){
                     statusDoc.setText(R.string.transit);
                 }
-                else{
-                    statusDoc.setText(R.string.transit_ok);
+                else {
+                    statusDoc.setText(R.string.deliver);
                 }
 
-                //datedepart.setText(post.getKeyCreatedAt());
+
+                datedepart.setText(post.getPickupdate().getDate());
 
                 itemview.setOnClickListener(new View.OnClickListener() {
                     @Override

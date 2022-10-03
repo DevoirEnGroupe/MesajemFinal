@@ -1,10 +1,7 @@
 package ht.mesajem.mesajem.Adapters;
 
-
-
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,32 +19,36 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
-import ht.mesajem.mesajem.Activities.DetailsActivity;
+import ht.mesajem.mesajem.Activities.MyRequestDetailActivity;
 import ht.mesajem.mesajem.Models.Post;
 import ht.mesajem.mesajem.R;
 
-public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.ViewHolder> {
+public class MyRequestAdapter extends RecyclerView.Adapter<MyRequestAdapter.ViewHolder> {
+
+
 
     List<Post> posts;
     Context context;
 
 
 
-    public ReceiverAdapter(List<Post> posts, Context context) {
+    public MyRequestAdapter(List<Post> posts, Context context) {
         this.posts = posts;
         this.context = context;
     }
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View postView = LayoutInflater.from(context).inflate(R.layout.itemreceived,parent,false);
+        View postView = LayoutInflater.from(context).inflate(R.layout.allrequest,parent,false);
 
         return new ViewHolder(postView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         Post post = posts.get(position);
         holder.bind(post);
 
@@ -76,63 +77,44 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.ViewHo
         TextView objectid;
         ImageView postuser;
         TextView userexped;
-        TextView  datedepart;
-        TextView datereceived;
+        TextView location;
+        TextView userrec;
+        TextView addresse;
         RelativeLayout itemview;
-        TextView statusDoc;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             objectid = itemView.findViewById(R.id.objectid);
-            statusDoc= itemView.findViewById(R.id.statusDoc);
             postuser = itemView.findViewById(R.id.postuser);
             userexped = itemView.findViewById(R.id.userexped);
-            datedepart = itemView.findViewById(R.id.datedepart);
-            datereceived = itemView.findViewById(R.id.datereceived);
+            location = itemView.findViewById(R.id.location);
+            addresse = itemView.findViewById(R.id.addresse);
+            userrec = itemView.findViewById(R.id.userrec);
             itemview =  itemView.findViewById(R.id.itemview);
         }
 
         public void bind(Post post) {
-
+            objectid.setText(post.getObjectId());
+            userexped.setText(post.getUser().getUsername());
+            userrec.setText(post.getFullname());
+            addresse.setText(post.getAddresse());
+            //location.setText(post.getLocation().toString());
             ParseFile image = post.getKeyImage();
             if(image !=null){
                 Glide.with(context).load(image.getUrl()).override(70,70).into(postuser);
             }
-            try {
-                objectid.setText(post.getObjectId());
-
-            }catch (Exception e){
-                Log.e("objectid","nul objectid");
-            }
-
-            userexped.setText(post.getUser().getUsername());
-
-            if(post.getStatus().equals(0)){
-                statusDoc.setText(R.string.pending);
-            }
-            else if(post.getStatus().equals(1)){
-                statusDoc.setText(R.string.order);
-            }
-            else if(post.getStatus().equals(2)){
-                statusDoc.setText(R.string.transit);
-            }
-            else {
-                statusDoc.setText(R.string.deliver);
-            }
-            //datedepart.setText(post.getKeyCreatedAt());
-
             itemview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                   Intent intent = new Intent(context, DetailsActivity.class);
-                   intent.putExtra("post", Parcels.wrap(post));
-                   context.startActivity(intent);
+                    Intent intent = new Intent(context, MyRequestDetailActivity.class);
+                    intent.putExtra("post", Parcels.wrap(post));
+                    context.startActivity(intent);
                 }
             });
-        }
 
+        }
     }
 }

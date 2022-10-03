@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import ht.mesajem.mesajem.Fragments.AllActivityFragment;
 import ht.mesajem.mesajem.Fragments.AllRequestFragment;
 import ht.mesajem.mesajem.Fragments.MyRequestFragment;
+import ht.mesajem.mesajem.Fragments.ProfilFragment;
 import ht.mesajem.mesajem.Fragments.ReceivedFragment;
 import ht.mesajem.mesajem.Fragments.SendFragment;
 import ht.mesajem.mesajem.R;
@@ -48,7 +49,7 @@ public class MainDeliveyActivity extends AppCompatActivity {
                         break;
                     case R.id.action_profile:
                     default:
-                        fragment = new ReceivedFragment();
+                        fragment = new ProfilFragment();
                         break;
 
                 }
