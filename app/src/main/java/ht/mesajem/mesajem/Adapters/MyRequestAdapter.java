@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.parse.ParseFile;
 
 import org.parceler.Parcels;
@@ -103,7 +104,7 @@ public class MyRequestAdapter extends RecyclerView.Adapter<MyRequestAdapter.View
             //location.setText(post.getLocation().toString());
             ParseFile image = post.getKeyImage();
             if(image !=null){
-                Glide.with(context).load(image.getUrl()).override(70,70).into(postuser);
+                Glide.with(context).load(image.getUrl()).override(70,70).transform(new RoundedCorners(15)).into(postuser);
             }
             itemview.setOnClickListener(new View.OnClickListener() {
                 @Override
