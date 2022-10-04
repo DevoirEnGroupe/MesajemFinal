@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -34,6 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     Button btKonekte;
     TextView tvenskri;
     String TAG = "LoginActivity";
+
+//    private ActivityLoginBinding binding;
+//
+//    final ProgressBar loadingProgressBar = binding.loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -102,8 +102,9 @@
         android:layout_marginEnd="30dp"
         android:drawableRight="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
+        android:inputType="textPassword"
         android:hint="@string/passwad"
-        android:inputType="" />
+/>
 
     <EditText
         android:id="@+id/etnonitiliza"
@@ -168,5 +169,21 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="48dp"
         app:srcCompat="@drawable/mesajem_logo_final" />
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etpaswod"
+        app:layout_constraintStart_toStartOf="@+id/etpaswod"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
 
 </RelativeLayout>
