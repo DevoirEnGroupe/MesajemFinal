@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import org.parceler.Parcels;
 
@@ -46,7 +47,7 @@ public class DetailsActivity extends AppCompatActivity {
         idpostdet.setText(post.getObjectId());
         expdet.setText(post.getUser().getUsername());
 
-        Glide.with(this).load(post.getKeyImage().getUrl()).override(70,70).into(postimdet);
+        Glide.with(this).load(post.getKeyImage().getUrl()).override(70,70).transform(new RoundedCorners(10)).into(postimdet);
 
     }
 

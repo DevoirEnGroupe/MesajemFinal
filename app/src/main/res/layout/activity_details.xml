@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/FirstRel"
         android:layout_width="match_parent"
-        android:layout_height="216dp"
+        android:layout_height="240dp"
         android:background="@color/Jaunce_citron">
 
 
@@ -70,10 +70,9 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/checkorder1"
@@ -82,19 +81,19 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="34dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="25dp"
                     android:src="@drawable/ic_baseline_check_circle_outline_24" />
 
                 <ImageView
                     android:id="@+id/order1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_marginStart="6dp"
                     android:layout_toEndOf="@+id/checkorder1"
                     android:src="@drawable/order1" />
 
                 <TextView
-                    android:id="@+id/tvorder1"
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -110,11 +109,11 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvorder1"
+                    android:layout_below="@+id/textView14"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order1"
-                    android:hint="TextView" />
+                    android:text="We have received your order" />
 
             </RelativeLayout>
 
@@ -130,19 +129,19 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="34dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="25dp"
                     android:src="@drawable/ic_baseline_check_circle_outline_24" />
 
                 <ImageView
                     android:id="@+id/order2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_marginStart="6dp"
                     android:layout_toEndOf="@+id/checkorder2"
                     android:src="@drawable/order2" />
 
                 <TextView
-                    android:id="@+id/tvorder2"
+                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -156,13 +155,13 @@
 
                 <TextView
                     android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvorder2"
+                    android:layout_width="234dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/textView12"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order2"
-                    android:hint="TextView" />
+                    android:text="Your Product packed and ready to be shipped" />
 
 
             </RelativeLayout>
@@ -170,7 +169,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp" >
+                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/checkorder3"
@@ -179,19 +178,19 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="34dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="25dp"
                     android:src="@drawable/ic_baseline_check_circle_outline_24" />
 
                 <ImageView
                     android:id="@+id/order3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_marginStart="6dp"
                     android:layout_toEndOf="@+id/checkorder3"
-                    android:src="@drawable/order1" />
+                    android:src="@drawable/order3" />
 
                 <TextView
-                    android:id="@+id/tvorder3"
+                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -205,20 +204,20 @@
 
                 <TextView
                     android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvorder3"
+                    android:layout_width="238dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@+id/textView16"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order3"
-                    android:hint="TextView" />
+                    android:text="Our Courier Partner will soon deliver the product" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp" >
+                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/checkorder4"
@@ -227,19 +226,19 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="34dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="25dp"
                     android:src="@drawable/ic_baseline_check_circle_outline_24" />
 
                 <ImageView
                     android:id="@+id/order4"
-                    android:layout_width="80dp"
+                    android:layout_width="70dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="6dp"
                     android:layout_toEndOf="@+id/checkorder4"
-                    android:src="@drawable/order1" />
+                    android:src="@drawable/order4" />
 
                 <TextView
-                    android:id="@+id/tvorder4"
+                    android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -253,13 +252,13 @@
 
                 <TextView
                     android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvorder4"
+                    android:layout_width="236dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@+id/textView18"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order4"
-                    android:text="TextView" />
+                    android:text="Our Courier Partner deliver the package to the speciifc location" />
 
 
             </RelativeLayout>
@@ -295,14 +294,14 @@
 
                 <ImageView
                     android:id="@+id/postimdet"
-                    android:layout_width="101dp"
-                    android:layout_height="92dp"
+                    android:layout_width="112dp"
+                    android:layout_height="95dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="11dp"
-                    android:layout_marginBottom="17dp"
+                    android:layout_marginBottom="4dp"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
@@ -310,23 +309,23 @@
                     android:layout_width="67dp"
                     android:layout_height="17dp"
 
-                    android:layout_below="@+id/expdet"
+                    android:layout_alignParentTop="true"
                     android:layout_marginStart="14dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
                     android:layout_toEndOf="@+id/postimdet"
                     android:gravity="top"
-                    android:hint="abf" />
+                    android:hint="Order number" />
 
                 <TextView
                     android:id="@+id/expdet"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
 
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="11dp"
+                    android:layout_below="@+id/idpostdet"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="9dp"
                     android:layout_toEndOf="@+id/postimdet"
-                    android:hint="edp_jean_je" />
+                    android:hint="Username" />
 
 
             </RelativeLayout>
@@ -336,5 +335,18 @@
 
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/trOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="298dp"
+        android:text="Track Your Order"
+        android:textColor="@color/Orange"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

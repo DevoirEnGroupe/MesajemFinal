@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -94,6 +95,9 @@ public class AllActivityFragment extends Fragment {
         posts = new ArrayList<>();
         adapter = new ReceiverAdapter(posts,getContext());
         rvPosts.setAdapter(adapter);
+        rvPosts.setHasFixedSize(true);
+        rvPosts.addItemDecoration(new DividerItemDecoration(getContext(),
+                DividerItemDecoration.VERTICAL));
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         rvPosts.setLayoutManager(layoutManager);
         layoutManager.setReverseLayout(true);
