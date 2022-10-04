@@ -3,7 +3,9 @@ package ht.mesajem.mesajem.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -33,16 +35,60 @@ public class DetailsActivity extends AppCompatActivity {
     ImageView checkorder4;
     TextView tvorder4;
 
+    RelativeLayout rl1;
+    RelativeLayout rl2;
+    RelativeLayout rl3;
+    RelativeLayout rl4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+        Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
+
         postimdet = findViewById(R.id.postimdet);
         idpostdet=findViewById(R.id.idpostdet);
         expdet =findViewById(R.id.expdet);
 
-        Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
+        rl1 = findViewById(R.id.Rela1);
+        rl2 = findViewById(R.id.Rela2);
+        rl3 = findViewById(R.id.Rela3);
+        rl4 = findViewById(R.id.Rela4);
+
+
+        if(post.getStatus().equals(0)){
+
+            rl1.setVisibility(View.VISIBLE);
+
+        }
+
+        else if(post.getStatus().equals(1)){
+
+            rl1.setVisibility(View.VISIBLE);
+            rl2.setVisibility(View.VISIBLE);
+
+        }
+        else if(post.getStatus().equals(2)){
+
+            rl1.setVisibility(View.VISIBLE);
+            rl2.setVisibility(View.VISIBLE);
+            rl3.setVisibility(View.VISIBLE);
+
+        }
+        else{
+
+            rl1.setVisibility(View.VISIBLE);
+            rl2.setVisibility(View.VISIBLE);
+            rl3.setVisibility(View.VISIBLE);
+            rl4.setVisibility(View.VISIBLE);
+
+        }
+
+
+
+
+
 
         idpostdet.setText(post.getObjectId());
         expdet.setText(post.getUser().getUsername());

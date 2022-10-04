@@ -72,12 +72,9 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
         final Button deliverbutton = findViewById(R.id.btproductdeliver);
 
         if(post.getStatus().equals(0)) {
-            onthewaybutton.setBackgroundColor(12345);
-            deliverbutton.setBackgroundColor(12345);
-            onthewaybutton.setEnabled(false);
-            onthewaybutton.setClickable(false);
-            deliverbutton.setEnabled(false);
-            deliverbutton.setClickable(false);
+
+            orderbutton.setVisibility(View.VISIBLE);
+
             orderbutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -89,12 +86,9 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
             });
         }
         else if(post.getStatus().equals(1)){
-            orderbutton.setBackgroundColor(12345);
-            deliverbutton.setBackgroundColor(12345);
-            deliverbutton.setEnabled(false);
-            deliverbutton.setClickable(false);
-            orderbutton.setEnabled(false);
-            orderbutton.setClickable(false);
+            onthewaybutton.setVisibility(View.VISIBLE);
+
+
             onthewaybutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -106,12 +100,9 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
 
         }
         else if(post.getStatus().equals(2)){
-            orderbutton.setBackgroundColor(12345);
-            onthewaybutton.setBackgroundColor(12345);
-            orderbutton.setEnabled(false);
-            orderbutton.setClickable(false);
-            onthewaybutton.setEnabled(false);
-            onthewaybutton.setClickable(false);
+
+            deliverbutton.setVisibility(View.VISIBLE);
+
             deliverbutton .setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -123,22 +114,8 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
         }
 
         else{
-            orderbutton.setBackgroundColor(12345);
-            onthewaybutton.setBackgroundColor(12345);
-            deliverbutton.setBackgroundColor(12345);
-            deliverbutton.setEnabled(false);
-            deliverbutton.setClickable(false);
-            orderbutton.setEnabled(false);
-            orderbutton.setClickable(false);
-            onthewaybutton.setEnabled(false);
-            onthewaybutton.setClickable(false);
-            deliverbutton .setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showarlet("CONGRATULATIONS", "Good Job");
-                }
-            });
 
+                    showarlet("CONGRATULATIONS", "Good Job");
         }
 
     }
