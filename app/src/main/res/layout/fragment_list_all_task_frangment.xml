@@ -19,7 +19,7 @@
         android:id="@+id/FirstRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="230dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
@@ -40,8 +40,8 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="14dp"
                 android:text="SEND A DOCUMENT "
-                android:textSize="17sp"
                 android:textColor="@color/Blue"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -63,7 +63,7 @@
         android:id="@+id/SecondRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="380dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
@@ -108,7 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/SecondRel"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="520dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
