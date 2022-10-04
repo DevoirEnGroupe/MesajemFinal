@@ -121,7 +121,7 @@ public class SenderAdapter extends RecyclerView.Adapter<SenderAdapter.ViewHolder
                 }
 
 
-                datedepart.setText(post.getPickupdate().getDate());
+                //datedepart.setText(post.getPickupdate().getDate());
 
                 itemview.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -193,6 +193,7 @@ public class SendActivity extends AppCompatActivity {
         post.setPrenom(firstname);
         post.setEmail(email);
         post.setAddresse(addresse);
+        post.setUserid(currentUser.getObjectId());
 
 
 

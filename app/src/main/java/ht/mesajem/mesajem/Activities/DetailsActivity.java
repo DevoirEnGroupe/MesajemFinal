@@ -19,6 +19,18 @@ public class DetailsActivity extends AppCompatActivity {
     ImageView postimdet;
     TextView idpostdet;
     TextView expdet;
+    ImageView order1;
+    ImageView checkorder1;
+    TextView tvorder1;
+    ImageView order2;
+    ImageView checkorder2;
+    TextView tvorder2;
+    ImageView order3;
+    ImageView checkorder3;
+    TextView tvorder3;
+    ImageView order4;
+    ImageView checkorder4;
+    TextView tvorder4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

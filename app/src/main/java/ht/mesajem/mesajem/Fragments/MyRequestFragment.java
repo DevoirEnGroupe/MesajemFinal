@@ -126,6 +126,7 @@ public class MyRequestFragment extends Fragment {
                         query.setLimit(20);
                         query.whereEqualTo("post", delivery.getObjectId());
 
+
                         query.addDescendingOrder(Post.KEY_CREATED_AT);
                         query.findInBackground(new FindCallback<Post>() {
                             @Override

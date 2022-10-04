@@ -107,7 +107,9 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.ViewHo
                 Log.e("objectid","nul objectid");
             }
 
+
             userexped.setText(post.getUser().getUsername());
+
 
             if(post.getStatus().equals(0)){
                 statusDoc.setText(R.string.pending);

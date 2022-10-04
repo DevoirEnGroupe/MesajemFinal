@@ -16,6 +16,7 @@ import java.util.Date;
 public class Post extends ParseObject {
 
     public static final String KEY_IMAGE ="image";
+    public static final String KEY_USER_ID ="iduser";
     public static final String KEY_USER ="user";
     public static final String KEY_PICKUP_DATE ="pickupdate";
     // public static final String KEY_OBJECT_ID = "objectId";
@@ -47,6 +48,12 @@ public class Post extends ParseObject {
         put(KEY_USER, user);
     }
 
+    public String getUserid(){
+        return getString(KEY_USER_ID);
+    }
+    public void setUserid(String userid){
+        put(KEY_USER_ID, userid);
+    }
 
     public Date getPickupdate(){
         return  getDate(KEY_PICKUP_DATE);

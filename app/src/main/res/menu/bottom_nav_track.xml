@@ -2,16 +2,23 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
     <item
         android:id="@+id/action_home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/action_compose"
+        android:icon="@drawable/ic_baseline_folder_24"
+        android:title="Doc Recieved"
+        app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_calcule"
-        android:icon="@drawable/ic_baseline_calculate_24"
-        android:title="Profile"
+        android:id="@+id/action_send"
+        android:icon="@drawable/ic_baseline_folder_24"
+        android:title="Doc Send"
         app:showAsAction="always" />
 
     <item
@@ -19,6 +26,7 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile"
         app:showAsAction="always" />
+
 
 
 

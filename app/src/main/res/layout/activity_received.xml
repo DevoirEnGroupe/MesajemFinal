@@ -44,21 +44,12 @@
         android:id="@+id/rvPosts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottomNavigation"
         android:layout_below="@+id/RvLt"
         android:layout_marginBottom="0dp"
         android:clipToPadding="false"
         android:padding="8dp" />
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_track"
-        android:background="@color/Orange"
-        />
 
 
 </RelativeLayout>

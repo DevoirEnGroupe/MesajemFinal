@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,8 @@ public class ReceivedActivity extends AppCompatActivity {
 
     protected void queryposts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        query.whereNotEqualTo("iduser",currentUser.getObjectId());
         query.include(Post.KEY_USER);
         query.setLimit(20);
         query.addDescendingOrder(Post.KEY_CREATED_AT);

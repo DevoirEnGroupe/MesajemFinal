@@ -55,7 +55,11 @@ public class TrackActivity extends AppCompatActivity {
                     case R.id.action_home:
                         fragment = new AllActivityFragment();
                         break;
+
                     case R.id.action_compose:
+                        fragment = new ReceivedFragment();
+                        break;
+                    case R.id.action_send:
                         fragment = new SendFragment();
                         break;
                     case R.id.action_profile:

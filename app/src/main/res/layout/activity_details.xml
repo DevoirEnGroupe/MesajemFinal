@@ -94,7 +94,7 @@
                     android:src="@drawable/order1" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/tvorder1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -110,11 +110,11 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView14"
+                    android:layout_below="@+id/tvorder1"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order1"
-                    android:text="TextView" />
+                    android:hint="TextView" />
 
             </RelativeLayout>
 
@@ -142,7 +142,7 @@
                     android:src="@drawable/order2" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/tvorder2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -158,11 +158,11 @@
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView12"
+                    android:layout_below="@+id/tvorder2"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order2"
-                    android:text="TextView" />
+                    android:hint="TextView" />
 
 
             </RelativeLayout>
@@ -191,7 +191,7 @@
                     android:src="@drawable/order1" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/tvorder3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -207,11 +207,11 @@
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView16"
+                    android:layout_below="@+id/tvorder3"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order3"
-                    android:text="TextView" />
+                    android:hint="TextView" />
 
             </RelativeLayout>
 
@@ -239,7 +239,7 @@
                     android:src="@drawable/order1" />
 
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/tvorder4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -255,7 +255,7 @@
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView18"
+                    android:layout_below="@+id/tvorder4"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/order4"

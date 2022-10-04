@@ -105,7 +105,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
             });
 
         }
-        else{
+        else if(post.getStatus().equals(2)){
             orderbutton.setBackgroundColor(12345);
             onthewaybutton.setBackgroundColor(12345);
             orderbutton.setEnabled(false);
@@ -117,6 +117,25 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
                 public void onClick(View v) {
                     showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
                     saveArrivedate();
+                }
+            });
+
+        }
+
+        else{
+            orderbutton.setBackgroundColor(12345);
+            onthewaybutton.setBackgroundColor(12345);
+            deliverbutton.setBackgroundColor(12345);
+            deliverbutton.setEnabled(false);
+            deliverbutton.setClickable(false);
+            orderbutton.setEnabled(false);
+            orderbutton.setClickable(false);
+            onthewaybutton.setEnabled(false);
+            onthewaybutton.setClickable(false);
+            deliverbutton .setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showarlet("CONGRATULATIONS", "Good Job");
                 }
             });
 
