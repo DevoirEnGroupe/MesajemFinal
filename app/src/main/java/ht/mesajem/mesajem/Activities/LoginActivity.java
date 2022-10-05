@@ -25,6 +25,7 @@ import com.parse.ParseUser;
 
 
 import ht.mesajem.mesajem.R;
+import ht.mesajem.mesajem.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -36,9 +37,9 @@ public class LoginActivity extends AppCompatActivity {
     TextView tvenskri;
     String TAG = "LoginActivity";
 
-//    private ActivityLoginBinding binding;
-//
-//    final ProgressBar loadingProgressBar = binding.loading;
+    //public ActivityLoginBinding binding;
+
+   // final ProgressBar loadingProgressBar = binding.loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.e(TAG, "Issue with Login",e);
                             return;
                         }
+                  //      loadingProgressBar.setVisibility(View.VISIBLE);
                         goMainActivity();
                         showAlert("Login Successful", "Welcome, " + username + "!", false);
                     }
@@ -108,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
     private void goMainActivity() {
         Intent i = new Intent(LoginActivity.this, ListTaskActivity.class);
         startActivity(i);
+       // loadingProgressBar.setVisibility(View.GONE);
         finish();;
     }
 
