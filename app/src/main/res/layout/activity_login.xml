@@ -102,9 +102,8 @@
         android:layout_marginEnd="30dp"
         android:drawableRight="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
-        android:inputType="textPassword"
         android:hint="@string/passwad"
-/>
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/etnonitiliza"
@@ -171,19 +170,25 @@
         app:srcCompat="@drawable/mesajem_logo_final" />
 
 
+
+
     <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="64dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/etpaswod"
-        app:layout_constraintStart_toStartOf="@+id/etpaswod"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="93dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="346dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="299dp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/Orange"
+        android:visibility="gone"/>
 
 
 </RelativeLayout>

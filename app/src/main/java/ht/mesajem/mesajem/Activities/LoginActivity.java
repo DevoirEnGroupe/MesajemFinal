@@ -25,7 +25,7 @@ import com.parse.ParseUser;
 
 
 import ht.mesajem.mesajem.R;
-import ht.mesajem.mesajem.databinding.ActivityLoginBinding;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,11 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText etpaswod;
     Button btKonekte;
     TextView tvenskri;
+    ProgressBar progressBar;
     String TAG = "LoginActivity";
 
-    //public ActivityLoginBinding binding;
 
-   // final ProgressBar loadingProgressBar = binding.loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         etnonitiliza= findViewById(R.id.etnonitiliza);
         tvpaswod= findViewById(R.id.tvpaswod);
         tvnonitiliza = findViewById(R.id.tvnonitiliza);
+        progressBar = findViewById(R.id.progressBar);
         //btSignIn=findViewById(R.id.bt_sign_in);
 
 
@@ -73,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
             private void loginUser(String username, String password) {
 
 //                progressDialog.show();
+
+                progressBar.setVisibility(View.VISIBLE);
 
                 Log.i(TAG,"Trying to login user" +username);
                 //Navigate to the main activity if the user has signed properly
@@ -110,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
     private void goMainActivity() {
         Intent i = new Intent(LoginActivity.this, ListTaskActivity.class);
         startActivity(i);
-       // loadingProgressBar.setVisibility(View.GONE);
+       progressBar.setVisibility(View.GONE);
         finish();;
     }
 
