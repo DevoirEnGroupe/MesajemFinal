@@ -1,68 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/ivGif"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="251dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="107dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:contentDescription="Gif" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/tvfelisitasyon"
+        android:layout_width="309dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/ivGif"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="95dp"
+        android:text="@string/felisitasyo"
+        android:textAlignment="center"
+        android:textColor="@color/Orange"
+        android:textStyle="bold"
+        tools:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/nan_yon_ti_"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="300dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvfelisitasyon"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginStart="127dp"
-            android:layout_marginTop="21dp"
-            android:gravity="center"
-            android:text="@string/felisitasyo"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/nan_yon_ti_"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="127dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="95dp"
-            android:gravity="center"
-            android:justificationMode="inter_word"
-            android:text="NAN YON TI TAN KI PA TWO LONG YON AJAN AP PASE REKIPERE DOKIMAN.  MESI PASKE W FE NOU KONFYANS"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-
-            />
-    </LinearLayout>
+        android:layout_below="@+id/tvfelisitasyon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="248dp"
+        android:justificationMode="inter_word"
+        android:text="You will receive your Package Soon"
+        android:textAlignment="center"
+        android:textColor="@color/Orange"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/bttounen"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="556dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="549dp"
+        android:layout_marginEnd="87dp"
         android:backgroundTint="#FF9D00"
-        android:text="GET BACK"
+        android:text="Send A New Document"
         android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp" />
+
+    <Button
+        android:id="@+id/trackpackage"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/bttounen"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="87dp"
+        android:backgroundTint="#FF9D00"
+        android:text="Track The Document"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp" />
 
 </RelativeLayout>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.ListAllTaskFrangment"
-    android:background="@drawable/background_white">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white"
+    tools:context=".Fragments.ListAllTaskFrangment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,7 +20,7 @@
         android:id="@+id/FirstRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="205dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
@@ -37,11 +38,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="14dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
                 android:text="SEND A DOCUMENT "
                 android:textColor="@color/Blue"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -63,7 +64,7 @@
         android:id="@+id/SecondRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="345dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
@@ -81,11 +82,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="40dp"
                 android:text="RECEIVE A DOCUMENT"
                 android:textColor="@color/Blue"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -108,7 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/SecondRel"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="485dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="9dp">
@@ -126,11 +127,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="14dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
                 android:text="TRACK DOCUMENT"
                 android:textColor="@color/Blue"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>

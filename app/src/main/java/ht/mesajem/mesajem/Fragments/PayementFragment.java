@@ -42,10 +42,13 @@ public class PayementFragment extends Fragment {
         btpayement= view.findViewById(R.id.btpayement);
         tvmount = view.findViewById(R.id.tvmount);
         tvpay = view.findViewById(R.id.tvpay);
+
+
+
         btpayement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "FELISITASYON", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Congratulation", Toast.LENGTH_SHORT).show();
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.relativ, new ConfirmationFragment())

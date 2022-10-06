@@ -60,6 +60,7 @@ public class SendActivity extends AppCompatActivity {
     EditText etimel;
     EditText etadress;
     EditText etsiyati;
+    Button btsubmit;
     public String photoFileName = "photo.jpg";
     File photoFile;
     ParseGeoPoint currentUserLocation;
@@ -78,7 +79,7 @@ public class SendActivity extends AppCompatActivity {
         PostImage = findViewById(R.id.PostImage);
         tvDocSend = findViewById(R.id.tvDocSend);
         send_id = findViewById(R.id.send_id);
-
+        btsubmit = findViewById(R.id.btsubmit);
         tvadress = findViewById(R.id.tvaddresse);
         tvsiyati = findViewById(R.id.tvsiyati);
         tvimel  = findViewById(R.id.tvimel);
@@ -93,43 +94,52 @@ public class SendActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LaunchCamera();
                 if(PostImage!=null){
-                    ButtonTakePic.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-                            if(photoFile== null||PostImage.getDrawable()== null){
-                                Toast.makeText(SendActivity.this,"ERROR PICTURE", Toast.LENGTH_LONG).show();
-                                return;
-                            }
-
-                            String addresse = etadress.getText().toString();
-                            String lastname = etsiyati.getText().toString();
-                            String firstname = etnon.getText().toString();
-                            String email = etimel.getText().toString();
-                            ParseUser currentUser = ParseUser.getCurrentUser();
-                            savePost(currentUser,photoFile,lastname,firstname,email,addresse);
-
-
-                            tvadress.setVisibility(View.GONE);
-                            tvsiyati.setVisibility(View.GONE);
-                            tvimel.setVisibility(View.GONE);
-                            tvnon.setVisibility(View.GONE);
-
-                            ButtonTakePic.setVisibility(View.GONE);
-                            PostImage.setVisibility(View.GONE);
-                            tvDocSend.setVisibility(View.GONE);
-                            send_id.setVisibility(View.GONE);
-                            etimel.setVisibility(View.GONE);
-                            etadress.setVisibility(View.GONE);
-                            etsiyati.setVisibility(View.GONE);
-                            etnon.setVisibility(View.GONE);
-                            Fragment fragment= new PayementFragment();
-                            fragmentManager.beginTransaction().replace(R.id.relativ,fragment).commit();
-                        }
-                    });
+                        btsubmit.setVisibility(View.VISIBLE);
+                        ButtonTakePic.setVisibility(View.GONE);
                 }
             }
         });
+
+
+btsubmit.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+
+
+        if(photoFile== null||PostImage.getDrawable()== null){
+            Toast.makeText(SendActivity.this,"ERROR PICTURE", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        String addresse = etadress.getText().toString();
+        String lastname = etsiyati.getText().toString();
+        String firstname = etnon.getText().toString();
+        String email = etimel.getText().toString();
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        savePost(currentUser,photoFile,lastname,firstname,email,addresse);
+
+
+        tvadress.setVisibility(View.GONE);
+        tvsiyati.setVisibility(View.GONE);
+        tvimel.setVisibility(View.GONE);
+        tvnon.setVisibility(View.GONE);
+
+
+        PostImage.setVisibility(View.GONE);
+        tvDocSend.setVisibility(View.GONE);
+        send_id.setVisibility(View.GONE);
+        etimel.setVisibility(View.GONE);
+        etadress.setVisibility(View.GONE);
+        etsiyati.setVisibility(View.GONE);
+        etnon.setVisibility(View.GONE);
+
+        btsubmit.setVisibility(View.GONE);
+        Fragment fragment= new PayementFragment();
+        fragmentManager.beginTransaction().replace(R.id.relativ,fragment).commit();
+
+    }
+});
+
     }
 
     private void LaunchCamera() {

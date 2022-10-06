@@ -58,4 +58,11 @@ dependencies {
     implementation 'com.github.parse-community:ParseTwitterUtils-Android:1.13.0'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation "com.github.parse-community:ParseFacebookUtils-Android:1.14.0"
+
+    implementation 'com.facebook.android:facebook-android-sdk:14.1.1'
+
+
 }

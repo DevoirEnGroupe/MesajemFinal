@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
 
 //                progressDialog.show();
 
-                progressBar.setVisibility(View.VISIBLE);
+
 
                 Log.i(TAG,"Trying to login user" +username);
                 //Navigate to the main activity if the user has signed properly
@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void done(ParseUser user, ParseException e) {
-//                        progressDialog.dismiss();
+                    progressBar.setVisibility(View.VISIBLE);
                         if(e!=null){
 
                             ParseUser.logOut();
@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.e(TAG, "Issue with Login",e);
                             return;
                         }
-                  //      loadingProgressBar.setVisibility(View.VISIBLE);
+
                         goMainActivity();
                         showAlert("Login Successful", "Welcome, " + username + "!", false);
                     }
@@ -110,9 +110,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goMainActivity() {
+
         Intent i = new Intent(LoginActivity.this, ListTaskActivity.class);
         startActivity(i);
-       progressBar.setVisibility(View.GONE);
+
         finish();;
     }
 
