@@ -13,10 +13,12 @@ import org.parceler.Parcel;
 public class Delivery extends ParseObject {
 
 
-    public static final String KEY_LOCATIOND = "locationd";
+    public static final String KEY_BODY = "body";
+    public static final String KEY_SUBJECT = "subject";
     public static final String KEY_USER ="userd";
     public static final String KEY_STATUS ="status";
     public static final String KEY_FULLNAME = "fullname";
+
 
 
 
@@ -28,6 +30,13 @@ public class Delivery extends ParseObject {
 
     public String getFullname(){
         return getString(KEY_FULLNAME);
+    }
+
+    public String getBody(){
+        return getString(KEY_BODY);
+    }
+    public String getSubject(){
+        return getString(KEY_SUBJECT);
     }
 
     public void setFullname(String fullname){
