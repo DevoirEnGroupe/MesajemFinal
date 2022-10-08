@@ -12,7 +12,7 @@
     <string name="montan_2500">Amount: 2,500.00 GDS</string>
     <string name="fason_pou_p">FASON POU PEYE</string>
     <string name="nan_yon_ti_">NAN YON TI TAN KI PA TWO LONG YON AJAN AP PASE REKIPERE DOKIMAN.  MESI PASKE W FE NOU KONFYANS</string>
-    <string name="felisitasyo">FELISITASYON OU RIVE PEYE</string>
+    <string name="felisitasyo">Order Sucessful</string>
     <string name="resevwa_dok">ALL PACKAGES</string>
     <string name="resevwa_dok1">DOKIMAN MWEN VOYE</string>
     <string name="pending">ORDER PLACED</string>
@@ -20,4 +20,6 @@
     <string name="transit">ON THE WAY</string>
     <string name="deliver">ON THE WAY</string>
     <string name="checkable">DELIVERY MAN</string>
+    <string name="facebook_app_id">2876670739145092</string>
+    <string name="fb_login_protocol_scheme">fb2876670739145092</string>
 </resources>

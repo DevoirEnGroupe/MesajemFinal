@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -25,6 +26,7 @@ import com.parse.ParseUser;
 
 import ht.mesajem.mesajem.R;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     TextView tvnonitiliza;
@@ -33,7 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText etpaswod;
     Button btKonekte;
     TextView tvenskri;
+    ProgressBar progressBar;
     String TAG = "LoginActivity";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         etnonitiliza= findViewById(R.id.etnonitiliza);
         tvpaswod= findViewById(R.id.tvpaswod);
         tvnonitiliza = findViewById(R.id.tvnonitiliza);
+        progressBar = findViewById(R.id.progressBar);
         //btSignIn=findViewById(R.id.bt_sign_in);
 
 
@@ -68,13 +74,15 @@ public class LoginActivity extends AppCompatActivity {
 
 //                progressDialog.show();
 
+
+
                 Log.i(TAG,"Trying to login user" +username);
                 //Navigate to the main activity if the user has signed properly
                 ParseUser.logInInBackground(username, password, new LogInCallback() {
 
                     @Override
                     public void done(ParseUser user, ParseException e) {
-//                        progressDialog.dismiss();
+                    progressBar.setVisibility(View.VISIBLE);
                         if(e!=null){
 
                             ParseUser.logOut();
@@ -82,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.e(TAG, "Issue with Login",e);
                             return;
                         }
+
                         goMainActivity();
                         showAlert("Login Successful", "Welcome, " + username + "!", false);
                     }
@@ -101,8 +110,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goMainActivity() {
+
         Intent i = new Intent(LoginActivity.this, ListTaskActivity.class);
         startActivity(i);
+
         finish();;
     }
 

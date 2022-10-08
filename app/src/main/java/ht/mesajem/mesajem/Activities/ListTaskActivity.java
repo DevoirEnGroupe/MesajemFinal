@@ -49,6 +49,10 @@ public class ListTaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_task);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
+         setSupportActionBar(toolbar);
+
 
         bottomNavigation = findViewById(R.id.bottomNavigation);
 
@@ -80,12 +84,11 @@ public class ListTaskActivity extends AppCompatActivity {
         });
         bottomNavigation.setSelectedItemId(R.id.action_home);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.switchitem,menu);
+        getMenuInflater().inflate(R.menu.top_nav_menu,menu);
         return  true;
     }
 
@@ -93,7 +96,15 @@ public class ListTaskActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if(item.getItemId()== R.id.checkable_menu) {
+              if(item.getItemId() == R.id.logout){
+
+                logoutUser();
+                return true;
+             }
+
+
+
+        if(item.getItemId()== R.id.switUser) {
             ParseUser currentuser = ParseUser.getCurrentUser();
             ParseQuery<Delivery> query = ParseQuery.getQuery(Delivery.class);
             query.include(Delivery.KEY_USER);
@@ -142,6 +153,17 @@ public class ListTaskActivity extends AppCompatActivity {
                 });
         AlertDialog ok = builder.create();
         ok.show();
+    }
+
+
+    public void logoutUser(){
+        ParseUser.logOut();
+        ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+        Toast.makeText(this,"Logout", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
+
+
     }
 
 }

@@ -43,7 +43,8 @@ public class ConfirmationFragment extends Fragment {
         TextView nan_yon_ti_ = view.findViewById(R.id.nan_yon_ti_);
         Button bttounen = view.findViewById(R.id.bttounen);
 
-        Glide.with(this).load(R.raw.git).override(200,200).into(ivGif);
+        Glide.with(this).load(R.raw.order_v).into(ivGif);
+
         bttounen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

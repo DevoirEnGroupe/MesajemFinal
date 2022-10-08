@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import java.util.List;
 
 import ht.mesajem.mesajem.Adapters.AllRequestAdapter;
 import ht.mesajem.mesajem.Adapters.ReceiverAdapter;
+import ht.mesajem.mesajem.EndlessRecyclerViewScrollListener;
 import ht.mesajem.mesajem.Models.Post;
 import ht.mesajem.mesajem.R;
 
@@ -42,6 +44,8 @@ public class AllRequestFragment extends Fragment {
     Boolean mFirstLoad;
     TextView tvreceive;
 
+    protected SwipeRefreshLayout swipeContainer;
+    EndlessRecyclerViewScrollListener scrollListener;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -101,11 +105,21 @@ public class AllRequestFragment extends Fragment {
         posts = new ArrayList<>();
         adapter = new AllRequestAdapter(posts,getContext());
         rvPosts.setAdapter(adapter);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+
         rvPosts.setLayoutManager(layoutManager);
+
         layoutManager.setReverseLayout(true);
-        mFirstLoad=true;
+     //   mFirstLoad=true;
+
         queryposts();
+
+
+
+
+
+
     }
 
     protected void queryposts() {
@@ -136,4 +150,19 @@ public class AllRequestFragment extends Fragment {
         });
 
     }
+
+
+    protected void fetchTimelineAsync(int page) {
+        // Send the network request to fetch the updated data
+        // getHomeProfileFragment is an example endpoint.
+        adapter.clear();
+        // ...the data has come back, add new items to your adapter...
+        queryposts();
+        // Now we call setRefreshing(false) to signal refresh has finished
+        swipeContainer.setRefreshing(false);
+
+    }
+
+
+
 }
