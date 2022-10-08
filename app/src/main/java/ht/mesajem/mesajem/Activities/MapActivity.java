@@ -252,6 +252,51 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     }
 
+    private void sendEmail(){
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+
+        Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
+
+
+        ParseQuery<Delivery> queryD = ParseQuery.getQuery(Delivery.class);
+        queryD.findInBackground(new FindCallback<Delivery>() {
+            @Override
+            public void done(List<Delivery> deliveries, ParseException e) {
+                if(e==null) {
+
+                    for (Delivery delivery : deliveries) {
+                        if (delivery.getUserd().getObjectId().equals(currentUser.getObjectId()) && delivery.getStatus().equals(true)) {
+
+                            Intent intent = new Intent(Intent.ACTION_SEND);
+
+                            // add three fiels to intent using putExtra function
+                            intent.putExtra(Intent.EXTRA_EMAIL,
+                                    new String[] { post.getEmail() });
+                            intent.putExtra(Intent.EXTRA_SUBJECT, delivery.getSubject());
+                            intent.putExtra(Intent.EXTRA_TEXT, delivery.getBody());
+
+                            // set type of intent
+                            intent.setType("message/rfc822");
+
+                            // startActivity with intent with chooser
+                            // as Email client using createChooser function
+                            startActivity(
+                                    Intent
+                                            .createChooser(intent,
+                                                    "Choose an Email client :"));
+
+                        }
+                    }
+                }
+
+
+            }
+        });
+    }
+
+
+
     private void showarlet(String title,String message){
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this)
                 .setTitle(title)
@@ -261,6 +306,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
                         savePost();
+                        sendEmail();
 
                         Intent intent = new Intent(ht.mesajem.mesajem.Activities.MapActivity.this, MainDeliveyActivity.class);
                         startActivity(intent);

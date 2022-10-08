@@ -202,7 +202,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
         googleMap.addMarker(new MarkerOptions().position(currentUser).title(ParseUser.getCurrentUser().getUsername()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         // zoom the map to the currentUserLocation
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentUser, 300));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentUser, 500));
     }
 
 
