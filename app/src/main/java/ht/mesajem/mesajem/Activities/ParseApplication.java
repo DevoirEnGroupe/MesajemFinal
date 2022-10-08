@@ -33,7 +33,7 @@ public class ParseApplication extends Application {
                 .build()
         );
 
-        ParseFacebookUtils.initialize(this);
+       // ParseFacebookUtils.initialize(this);
 
     }
 }

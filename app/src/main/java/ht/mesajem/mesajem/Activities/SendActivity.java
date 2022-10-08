@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseGeoPoint;
@@ -61,6 +62,7 @@ public class SendActivity extends AppCompatActivity {
     EditText etadress;
     EditText etsiyati;
     Button btsubmit;
+    FloatingActionButton floatingActionButton;
     public String photoFileName = "photo.jpg";
     File photoFile;
     ParseGeoPoint currentUserLocation;
@@ -88,6 +90,8 @@ public class SendActivity extends AppCompatActivity {
         etimel = findViewById(R.id.etimel);
         etadress =findViewById(R.id.etadress);
         etsiyati = findViewById(R.id.etsiyati);
+        floatingActionButton = findViewById(R.id.floationB);
+
 
         ButtonTakePic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +100,17 @@ public class SendActivity extends AppCompatActivity {
                 if(PostImage!=null){
                         btsubmit.setVisibility(View.VISIBLE);
                         ButtonTakePic.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchCamera();
+                if(PostImage!=null){
+                    btsubmit.setVisibility(View.VISIBLE);
+                    ButtonTakePic.setVisibility(View.GONE);
                 }
             }
         });
