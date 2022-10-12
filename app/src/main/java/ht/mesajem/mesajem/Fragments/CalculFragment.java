@@ -2,21 +2,30 @@ package ht.mesajem.mesajem.Fragments;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
+
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.parse.ParseGeoPoint;
+import com.parse.ParseUser;
 
+import ht.mesajem.mesajem.Activities.LoginActivity;
 import ht.mesajem.mesajem.R;
 
 public class CalculFragment extends Fragment {
@@ -24,15 +33,19 @@ public class CalculFragment extends Fragment {
     GoogleMap mMap;
     SearchView searchView;
 
+    LocationManager locationManager;
+
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng Haiti = new LatLng(19.054426, -73.04597100000001);
-            googleMap.addMarker(new MarkerOptions().position(Haiti).title("Marker in Haiti"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(Haiti));
+            LatLng haiti = new LatLng(19.054426, -73.04597100000001);
+            googleMap.addMarker(new MarkerOptions().position(haiti).title("Marker in Haiti"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(haiti));
+            showCurrentUserInMap(googleMap);
         }
     };
+
 
 
     @Nullable
@@ -53,9 +66,10 @@ public class CalculFragment extends Fragment {
             mapFragment.getMapAsync(callback);
         }
 
-        searchView = view.findViewById(R.id.idSearchView);
+         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+       searchView = view.findViewById(R.id.idSearchView);
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+       searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
@@ -66,5 +80,51 @@ public class CalculFragment extends Fragment {
                 return false;
             }
         });
+    }
+
+
+    private ParseGeoPoint getCurrentUserLocation() {
+
+
+        // finding currentUser
+        ParseUser currentUser = ParseUser.getCurrentUser();
+
+        // if it's not possible to find the user, return to login
+        if (currentUser == null) {
+            alertDisplayer("Well... you're not logged in...", "Login first!");
+            Intent intent = new Intent(getContext(), LoginActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        // otherwise, return the current user location
+        return currentUser.getParseGeoPoint("Location");
+
+
+    }
+
+    private void showCurrentUserInMap(final GoogleMap googleMap) {
+
+        ParseGeoPoint currentUserLocation = getCurrentUserLocation();
+
+        // creating a marker in the map showing the current user location
+        LatLng currentUser = new LatLng(currentUserLocation.getLatitude(), currentUserLocation.getLongitude());
+        googleMap.addMarker(new MarkerOptions().position(currentUser).title(ParseUser.getCurrentUser().getUsername()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+        // zoom the map to the currentUserLocation
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentUser, 500));
+    }
+
+    private void alertDisplayer(String title, String message) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getContext())
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        android.app.AlertDialog ok = builder.create();
+        ok.show();
     }
 }
