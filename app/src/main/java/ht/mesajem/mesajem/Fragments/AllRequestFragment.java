@@ -41,7 +41,7 @@ public class AllRequestFragment extends Fragment {
     RecyclerView rvPosts;
     AllRequestAdapter adapter;
     List<Post> posts;
-    Boolean mFirstLoad;
+    Boolean mFirstLoad = true;
     TextView tvreceive;
 
     protected SwipeRefreshLayout swipeContainer;

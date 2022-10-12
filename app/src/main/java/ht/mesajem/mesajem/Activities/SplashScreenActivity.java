@@ -1,8 +1,11 @@
 package ht.mesajem.mesajem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
@@ -18,6 +21,8 @@ public class SplashScreenActivity extends AppCompatActivity {
     ImageView splach_im1;
     TextView tv_splash;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +31,15 @@ public class SplashScreenActivity extends AppCompatActivity {
         splach_im1 = findViewById(R.id.splach_im1);
         //splach_im2 = findViewById(R.id.splach_im2);
 
-        new Handler()
-                .postDelayed( new Runnable() {
-                    @Override
-                    public void run () {
-                        startActivity( new Intent(SplashScreenActivity.this, LoginActivity.class )) ;
-                        finish() ;
-                    }
-                } , 1500 ) ;
+            new Handler()
+                    .postDelayed( new Runnable() {
+                        @Override
+                        public void run () {
+                            startActivity( new Intent(SplashScreenActivity.this, LoginActivity.class )) ;
+                            finish() ;
+                        }
+                    } , 1500 ) ;
+
+
     }
 }

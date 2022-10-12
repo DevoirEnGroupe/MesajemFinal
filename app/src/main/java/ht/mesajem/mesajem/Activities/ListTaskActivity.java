@@ -68,7 +68,7 @@ public class ListTaskActivity extends AppCompatActivity {
                     case R.id.action_home:
                         fragment = new ListAllTaskFrangment();
                         break;
-                    case R.id.action_compose:
+                    case R.id.action_calcule:
                         fragment = new CalculFragment();
                         break;
                     case R.id.action_profile:
@@ -113,21 +113,25 @@ public class ListTaskActivity extends AppCompatActivity {
                 @Override
                 public void done(List<Delivery> deliverys, ParseException e) {
 
-                    for(Delivery delivery:deliverys){
+                    try {
 
-                        if (e == null) {
-                            if(delivery.getStatus().equals(true) && delivery.getUserd().getObjectId().equals(currentuser.getObjectId())) {
-                                showAlert("DELIVERY MAN", "WELCOME" + delivery.getStatus());
-                                Intent intent = new Intent(ListTaskActivity.this, MainDeliveyActivity.class);
-                                startActivity(intent);
+
+                        for (Delivery delivery : deliverys) {
+
+                            if (e == null) {
+                                if (delivery.getStatus().equals(true) && delivery.getUserd().getObjectId().equals(currentuser.getObjectId())) {
+                                    showAlert("DELIVERY MAN", "WELCOME" + delivery.getStatus());
+                                    Intent intent = new Intent(ListTaskActivity.this, MainDeliveyActivity.class);
+                                    startActivity(intent);
+                                } else {
+
+                                    showAlert("DELIVERY MAN", "SORRY YOU'RE NOT A MESAJEM DELIVERY IF YOU WANNA BECOME A DELIVERY" + "PLEASE CONTACT US" + delivery.getStatus());
+                                }
                             }
 
-                            else {
 
-                                showAlert("DELIVERY MAN", "SORRY YOU'RE NOT A MESAJEM DELIVERY IF YOU WANNA BECOME A DELIVERY" +"PLEASE CONTACT US" + delivery.getStatus());
-                            }
                         }
-
+                    }catch (Exception ex){
 
                     }
 
