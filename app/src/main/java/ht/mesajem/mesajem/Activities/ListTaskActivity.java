@@ -96,15 +96,15 @@ public class ListTaskActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-              if(item.getItemId() == R.id.logout){
+          if(item.getItemId() == R.id.logout){
 
-                logoutUser();
-                return true;
-             }
+            logoutUser();
+            return true;
+         }
 
 
 
-        if(item.getItemId()== R.id.switUser) {
+        else if(item.getItemId()== R.id.switUser) {
             ParseUser currentuser = ParseUser.getCurrentUser();
             ParseQuery<Delivery> query = ParseQuery.getQuery(Delivery.class);
             query.include(Delivery.KEY_USER);

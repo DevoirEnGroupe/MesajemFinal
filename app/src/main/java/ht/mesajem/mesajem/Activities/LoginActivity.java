@@ -100,18 +100,15 @@ public class LoginActivity extends AppCompatActivity {
        });*/
 
 
-////////////////////facebook/////////////////////////
-        if(ActivityCompat.checkSelfPermission(LoginActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(LoginActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(LoginActivity.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+          ActivityCompat.requestPermissions(LoginActivity.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
             btKonekte.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     String username = etnonitiliza.getText().toString();
                     String password = etpaswod.getText().toString();
-                    Log.i(TAG, "Click on Login button");
-
                     loginUser(username,password);
+                    Log.i(TAG, "Click on Login button");
 
                 }
 
@@ -142,8 +139,6 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 }
             });
-
-        }
 
 
         tvenskri.setOnClickListener(new View.OnClickListener() {
