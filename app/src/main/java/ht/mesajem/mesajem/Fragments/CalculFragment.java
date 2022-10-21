@@ -52,10 +52,6 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng haiti = new LatLng(19.054426, -73.04597100000001);
-        googleMap.addMarker(new MarkerOptions().position(haiti).title("Marker in Haiti"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(haiti));
-      //  showCurrentUserInMap(googleMap);
     }
 
 
@@ -84,11 +80,7 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
-
                 searchListener();
-
-
                 return false;
             }
 
@@ -107,9 +99,7 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
         String locSearch = searchView.getQuery().toString();
 
         List<Address> addressesList = null;
-       // ParseUser currentUser= ParseUser.getCurrentUser();
         try {
-
 
             if(locSearch!=null || locSearch.equals("")){
                 Geocoder geocoder = new Geocoder(getContext());
@@ -122,6 +112,8 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
                 }
 
                 ParseGeoPoint currentUserLocation = getCurrentUserLocation();
+
+                showCurrentUserInMap(mMap);
 
                 // creating a marker in the map showing the current user location
                 LatLng currentUser = new LatLng(currentUserLocation.getLatitude(), currentUserLocation.getLongitude());
@@ -139,7 +131,6 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
 
                double distance = SphericalUtil.computeDistanceBetween(currentUser, latLng);
 
-                //Toast.makeText(getContext(), "Distance between Sydney and Brisbane is \n " + String.format("%.2f", distance / 1000) + "km", Toast.LENGTH_SHORT).show();
 
                 alertDisplayer("The distance between " + locSearch +  " and you is", "" + String.format("%.2f", distance / 1000) + " km");
 
@@ -185,7 +176,7 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(currentUser).title(ParseUser.getCurrentUser().getUsername()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         // zoom the map to the currentUserLocation
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentUser, 100));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentUser, 50));
     }
 
     private void alertDisplayer(String title, String message) {
