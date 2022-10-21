@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.parse.Parse;
 import com.parse.ParseObject;
-import com.parse.facebook.ParseFacebookUtils;
 
 import ht.mesajem.mesajem.Models.Delivery;
 import ht.mesajem.mesajem.Models.Post;

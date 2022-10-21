@@ -25,34 +25,38 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import com.google.maps.android.SphericalUtil;
 import com.parse.ParseGeoPoint;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.Map;
+
 
 import ht.mesajem.mesajem.Activities.LoginActivity;
+
 import ht.mesajem.mesajem.R;
 
 public class CalculFragment extends Fragment implements OnMapReadyCallback {
 
-    LatLng latLng;
+   static LatLng latLng;
     SearchView searchView;
-    String locSearch;
+
     GoogleMap mMap;
 
     LocationManager locationManager;
 
 
-        @Override
-        public void onMapReady(GoogleMap googleMap) {
-             mMap = googleMap;
-            LatLng haiti = new LatLng(19.054426, -73.04597100000001);
-            googleMap.addMarker(new MarkerOptions().position(haiti).title("Marker in Haiti"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(haiti));
-            showCurrentUserInMap(googleMap);
-        }
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        LatLng haiti = new LatLng(19.054426, -73.04597100000001);
+        googleMap.addMarker(new MarkerOptions().position(haiti).title("Marker in Haiti"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(haiti));
+      //  showCurrentUserInMap(googleMap);
+    }
 
 
 
@@ -74,16 +78,16 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
 
 
 
-         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-       searchView = view.findViewById(R.id.idSearchView);
+        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        searchView = view.findViewById(R.id.idSearchView);
 
-       searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
 
 
-                    searchListener();
-                   // Toast.makeText(getContext(), ""+locSearch, Toast.LENGTH_SHORT).show();
+                searchListener();
+
 
                 return false;
             }
@@ -103,7 +107,7 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
         String locSearch = searchView.getQuery().toString();
 
         List<Address> addressesList = null;
-
+       // ParseUser currentUser= ParseUser.getCurrentUser();
         try {
 
 
@@ -117,12 +121,27 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
                     e.printStackTrace();
                 }
 
+                ParseGeoPoint currentUserLocation = getCurrentUserLocation();
+
+                // creating a marker in the map showing the current user location
+                LatLng currentUser = new LatLng(currentUserLocation.getLatitude(), currentUserLocation.getLongitude());
+                mMap.addMarker(new MarkerOptions().position(currentUser).title(ParseUser.getCurrentUser().getUsername()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+                // zoom the map to the currentUserLocation
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentUser, 50));
+
                 Address address = addressesList.get(0);
                 latLng = new LatLng(address.getLatitude(), address.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(latLng).title(locSearch).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
                 Toast.makeText(getContext(), ""+latLng, Toast.LENGTH_SHORT).show();
                 // below line is to animate camera to that position.
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 100));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 50));
+
+               double distance = SphericalUtil.computeDistanceBetween(currentUser, latLng);
+
+                //Toast.makeText(getContext(), "Distance between Sydney and Brisbane is \n " + String.format("%.2f", distance / 1000) + "km", Toast.LENGTH_SHORT).show();
+
+                alertDisplayer("The distance between " + locSearch +  " and you is", "" + String.format("%.2f", distance / 1000) + " km");
 
             }
 
@@ -135,6 +154,7 @@ public class CalculFragment extends Fragment implements OnMapReadyCallback {
         }
 
     }
+
 
 
     private ParseGeoPoint getCurrentUserLocation() {

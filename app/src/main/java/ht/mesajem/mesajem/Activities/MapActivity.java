@@ -248,8 +248,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
             }
         });
-        // Toast.makeText(this, ""+delivery.get("objectId"), Toast.LENGTH_SHORT).show();
-
     }
 
     private void sendEmail(){

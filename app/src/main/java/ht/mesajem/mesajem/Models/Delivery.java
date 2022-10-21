@@ -20,10 +20,6 @@ public class Delivery extends ParseObject {
     public static final String KEY_FULLNAME = "fullname";
 
 
-
-
-
-
     public Delivery(){
 
     }
