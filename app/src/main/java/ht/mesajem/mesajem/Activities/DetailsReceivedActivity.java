@@ -78,6 +78,7 @@ public class DetailsReceivedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DetailsReceivedActivity.this,getClass());
+                startActivity(i);
             }
         });
 
