@@ -2,6 +2,7 @@ package ht.mesajem.mesajem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,11 +22,13 @@ public class DetailsReceivedActivity extends AppCompatActivity {
     ImageView postimdet;
     TextView idpostdet;
     TextView expdet;
+    TextView backbutton_details;
 
     RelativeLayout rl1;
     RelativeLayout rl2;
     RelativeLayout rl3;
     RelativeLayout rl4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +74,12 @@ public class DetailsReceivedActivity extends AppCompatActivity {
 
         }
 
+        backbutton_details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DetailsReceivedActivity.this,getClass());
+            }
+        });
 
         idpostdet.setText(post.getObjectId());
         expdet.setText(post.getUser().getUsername());
