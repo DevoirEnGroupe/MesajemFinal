@@ -57,9 +57,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     LocationManager locationManager;
 
-    TextView tv;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

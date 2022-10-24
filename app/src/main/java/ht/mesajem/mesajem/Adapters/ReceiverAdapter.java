@@ -21,9 +21,12 @@ import com.parse.ParseFile;
 
 import org.parceler.Parcels;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
 
 import ht.mesajem.mesajem.Activities.DetailsActivity;
+import ht.mesajem.mesajem.Activities.DetailsReceivedActivity;
 import ht.mesajem.mesajem.Models.Post;
 import ht.mesajem.mesajem.R;
 
@@ -124,13 +127,30 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.ViewHo
             else {
                 statusDoc.setText(R.string.deliver);
             }
-            //datedepart.setText(post.getKeyCreatedAt());
+            try {
+                Date date = post.getPickupdate();
+
+                datedepart.setText(DateFormat.getDateInstance().format(date));
+
+            }catch (Exception e){
+                e.getMessage();
+                datedepart.setVisibility(View.INVISIBLE);
+            }
+
+            try {
+                Date date = post.getArrivedate();
+                datereceived.setText(DateFormat.getDateInstance().format(date));
+            }catch (Exception e){
+                e.getMessage();
+                datereceived.setVisibility(View.INVISIBLE);
+            }
+
 
             itemview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                   Intent intent = new Intent(context, DetailsActivity.class);
+                   Intent intent = new Intent(context, DetailsReceivedActivity.class);
                    intent.putExtra("post", Parcels.wrap(post));
                    context.startActivity(intent);
                 }

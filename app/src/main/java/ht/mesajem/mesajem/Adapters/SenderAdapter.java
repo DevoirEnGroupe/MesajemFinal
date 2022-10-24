@@ -19,6 +19,8 @@ import com.parse.ParseFile;
 
 import org.parceler.Parcels;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
 
 import ht.mesajem.mesajem.Activities.DetailsActivity;
@@ -119,6 +121,24 @@ public class SenderAdapter extends RecyclerView.Adapter<SenderAdapter.ViewHolder
                 }
                 else {
                     statusDoc.setText(R.string.deliver);
+                }
+
+                try {
+                    Date date = post.getPickupdate();
+
+                    datedepart.setText(DateFormat.getDateInstance().format(date));
+
+                }catch (Exception e){
+                    e.getMessage();
+                    datedepart.setVisibility(View.INVISIBLE);
+                }
+
+                try {
+                    Date date = post.getArrivedate();
+                    datereceived.setText(DateFormat.getDateInstance().format(date));
+                }catch (Exception e){
+                    e.getMessage();
+                    datereceived.setVisibility(View.INVISIBLE);
                 }
 
 

@@ -18,7 +18,7 @@
     <string name="pending">ORDER PLACED</string>
     <string name="order">ORDER PACKED</string>
     <string name="transit">ON THE WAY</string>
-    <string name="deliver">ON THE WAY</string>
+    <string name="deliver">DELIVER</string>
     <string name="checkable">DELIVERY MAN</string>
     <string name="facebook_app_id">2876670739145092</string>
     <string name="fb_login_protocol_scheme">fb2876670739145092</string>

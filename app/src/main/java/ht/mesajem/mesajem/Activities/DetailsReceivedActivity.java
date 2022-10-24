@@ -16,8 +16,7 @@ import org.parceler.Parcels;
 import ht.mesajem.mesajem.Models.Post;
 import ht.mesajem.mesajem.R;
 
-public class DetailsActivity extends AppCompatActivity {
-
+public class DetailsReceivedActivity extends AppCompatActivity {
 
     ImageView postimdet;
     TextView idpostdet;
@@ -31,8 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
-
+        setContentView(R.layout.activity_details_received);
         Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
 
         postimdet = findViewById(R.id.postimdet);
@@ -80,7 +78,4 @@ public class DetailsActivity extends AppCompatActivity {
         Glide.with(this).load(post.getKeyImage().getUrl()).override(70,70).transform(new RoundedCorners(10)).into(postimdet);
 
     }
-
-
-
 }
