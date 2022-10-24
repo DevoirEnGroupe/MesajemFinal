@@ -36,6 +36,7 @@ import com.parse.ParseUser;
 
 import org.parceler.Parcels;
 
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -51,7 +52,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
 
     LocationManager locationManager;
 
-    TextView tv;
+
 
 
     @Override
@@ -82,6 +83,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
                     showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
 
                     savePickupdate();
+                    saveEstimateDate();
                 }
             });
         }
@@ -335,6 +337,44 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
                                     Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
                                     post.setArrivedate(new Date());
                                     post.setStatus(3);
+
+                                    post.saveInBackground();
+                                    //Toast.makeText(MapActivity.this, "DATE +10 " + estimate +" DATE" + today, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MyRequestDetailActivity.this, "" + delivery.getObjectId(), Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+                        }
+                    }
+                }
+
+            }
+        });
+
+    }
+    private void saveEstimateDate(){
+        savePickupdate();
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        ParseQuery<Delivery> delivery = ParseQuery.getQuery(Delivery.class);
+
+        delivery.findInBackground(new FindCallback<Delivery>() {
+            @Override
+            public void done(List<Delivery> deliverys, ParseException e) {
+                if (e == null) {
+
+                    for (Delivery delivery : deliverys) {
+                        if (delivery.getUserd().getObjectId().equals(currentUser.getObjectId())) {
+
+                            ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+                            query.findInBackground(new FindCallback<Post>() {
+                                @Override
+                                public void done(List<Post> posts, ParseException e) {
+
+                                    Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
+                                    Number date = post.getPickupdate().getDay();
+
+                                    post.setEstimatedate(date.intValue()+10);
 
                                     post.saveInBackground();
                                     //Toast.makeText(MapActivity.this, "DATE +10 " + estimate +" DATE" + today, Toast.LENGTH_SHORT).show();

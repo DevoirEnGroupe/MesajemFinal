@@ -68,10 +68,10 @@ public class Post extends ParseObject {
     public void setArrivedate(Date arrivedate) {
         put(KEY_ARRIVE_DATE, arrivedate);
     }
-    public Date getEstimatedate(){
-        return  getDate(KEY_ESTIMATE_DATE);
+    public Number getEstimatedate(){
+        return  getNumber(KEY_ESTIMATE_DATE);
     }
-    public void setEstimatedate(Date estimatedate) {
+    public void setEstimatedate(Number estimatedate) {
         put(KEY_ESTIMATE_DATE, estimatedate);
     }
 
