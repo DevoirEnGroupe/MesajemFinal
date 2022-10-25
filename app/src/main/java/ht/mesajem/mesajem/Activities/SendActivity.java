@@ -21,6 +21,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -57,7 +58,7 @@ public class SendActivity extends AppCompatActivity {
     TextView tvsiyati;
     TextView tvimel;
     TextView tvnon;
-    EditText etnon;
+    AutoCompleteTextView etnon;
     EditText etimel;
     EditText etadress;
     EditText etsiyati;

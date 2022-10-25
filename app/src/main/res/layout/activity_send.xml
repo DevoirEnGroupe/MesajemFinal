@@ -92,7 +92,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="65dp"
                 android:gravity="top"
-                android:text="Reciever Lastname"
+                android:text="Instition Name"
                 android:textStyle="bold" />
 
             <TextView
@@ -105,7 +105,7 @@
                 android:text="Reciever Firstname"
                 android:textStyle="bold" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/etnon"
                 android:layout_width="380dp"
                 android:layout_height="45dp"
@@ -113,8 +113,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
-                android:hint="Reciever Name"
-                android:inputType="" />
+                android:ems="10"
+                android:text="">
+                <requestFocus />
+            </AutoCompleteTextView>
+
 
             <EditText
                 android:id="@+id/etsiyati"

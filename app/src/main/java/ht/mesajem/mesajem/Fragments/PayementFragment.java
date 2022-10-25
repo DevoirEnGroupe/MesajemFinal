@@ -19,7 +19,6 @@ import ht.mesajem.mesajem.R;
 public class PayementFragment extends Fragment {
 
     Button btpayement;
-    TextView tvpay;
     TextView tvmount;
 
 
@@ -41,8 +40,6 @@ public class PayementFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         btpayement= view.findViewById(R.id.btpayement);
         tvmount = view.findViewById(R.id.tvmount);
-        tvpay = view.findViewById(R.id.tvpay);
-
 
 
         btpayement.setOnClickListener(new View.OnClickListener() {
