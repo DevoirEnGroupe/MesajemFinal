@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -21,6 +22,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,15 +34,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseGeoPoint;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import org.parceler.Parcels;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import ht.mesajem.mesajem.Fragments.MapsFragment;
 import ht.mesajem.mesajem.Fragments.PayementFragment;
+import ht.mesajem.mesajem.Models.Delivery;
 import ht.mesajem.mesajem.Models.Post;
 import ht.mesajem.mesajem.R;
 
@@ -67,7 +74,8 @@ public class SendActivity extends AppCompatActivity {
     public String photoFileName = "photo.jpg";
     File photoFile;
     ParseGeoPoint currentUserLocation;
-
+    String toto;
+    ArrayList<String> arraylist = new ArrayList<>();
     LocationManager locationManager;
 
 
@@ -92,6 +100,43 @@ public class SendActivity extends AppCompatActivity {
         etadress =findViewById(R.id.etadress);
         etsiyati = findViewById(R.id.etsiyati);
         floatingActionButton = findViewById(R.id.floationB);
+
+
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        //query.whereEqualTo("email", "email@example.com");
+
+        query.findInBackground((users, e) -> {
+            if (e == null) {
+                // The query was successful, returns the users that matches
+                // the criteria.
+                for(ParseUser user1 : users) {
+
+                    toto = user1.getString("Fullname");
+                    arraylist.add(toto);
+                    //Toast.makeText(this, ""+toto, Toast.LENGTH_SHORT).show();
+
+                }
+                Toast.makeText(this, ""+arraylist, Toast.LENGTH_SHORT).show();
+
+            } else {
+                // Something went wrong.
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        try {
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>
+                    (this, android.R.layout.select_dialog_item, arraylist);
+
+            etnon.setThreshold(1);//will start working from first character
+            etnon.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
+            etnon.setTextColor(Color.YELLOW);
+
+
+        }catch (Exception e){
+            Toast.makeText(SendActivity.this, "" +e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
 
         ButtonTakePic.setOnClickListener(new View.OnClickListener() {
@@ -129,9 +174,12 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
 
         String addresse = etadress.getText().toString();
         String lastname = etsiyati.getText().toString();
-        String firstname = etnon.getText().toString();
+
         String email = etimel.getText().toString();
         ParseUser currentUser = ParseUser.getCurrentUser();
+
+        String firstname = etnon.getText().toString();
+
         savePost(currentUser,photoFile,lastname,firstname,email,addresse);
 
 
@@ -215,11 +263,14 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
         Post post = new Post();
         post.setKeyImage(new ParseFile(photoFile));
         post.setUser(currentUser);
-        post.setFullname(lastname);
-        post.setPrenom(firstname);
+        post.setFullname(firstname);
+        post.setPrenom(lastname);
         post.setEmail(email);
         post.setAddresse(addresse);
         post.setUserid(currentUser.getObjectId());
+
+
+
 
 
 
