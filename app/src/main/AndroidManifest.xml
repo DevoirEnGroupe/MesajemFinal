@@ -29,6 +29,9 @@
         android:theme="@style/Theme.Mesajem"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.DeliverInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.DetailsReceivedActivity"
             android:exported="false" />
         <!--

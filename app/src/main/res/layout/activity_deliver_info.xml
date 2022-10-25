@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DeliverInfoActivity"
+    android:background="@drawable/background_white">
+
+
+    <RelativeLayout
+        android:id="@+id/FirstRel"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/Jaunce_citron">
+
+
+        <ImageView
+            android:id="@+id/detailsPics"
+            android:layout_width="266dp"
+            android:layout_height="182dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="58dp"
+            android:background="@drawable/detailspng" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="129dp"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="57dp"
+            android:text="Track Your Order!"
+            android:textColor="@color/Blue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="You're Welcome ..."
+            android:textColor="@color/Blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/backbutton_details"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="294dp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Back"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/SecondRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FirstRel"
+        android:layout_marginTop="100dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Rela1"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp">
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ThirdRel"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="160dp"
+        android:paddingBottom="5dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="39dp"
+            android:layout_marginEnd="38dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:id="@+id/FourthRel"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <ImageView
+                    android:id="@+id/delim"
+                    android:layout_width="112dp"
+                    android:layout_height="95dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="4dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/iddel"
+                    android:layout_width="67dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/delim"
+                    android:gravity="top"
+                    android:hint="Not Yet" />
+
+                <TextView
+                    android:id="@+id/delname"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iddel"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toEndOf="@+id/delim"
+                    android:hint="Not Yet" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -28,6 +28,7 @@ public class DetailsReceivedActivity extends AppCompatActivity {
     RelativeLayout rl2;
     RelativeLayout rl3;
     RelativeLayout rl4;
+    TextView infoDel;
 
 
     @Override
@@ -39,6 +40,7 @@ public class DetailsReceivedActivity extends AppCompatActivity {
         postimdet = findViewById(R.id.postimdet);
         idpostdet=findViewById(R.id.idpostdet);
         expdet =findViewById(R.id.expdet);
+        infoDel = findViewById(R.id.textView10);
 
         rl1 = findViewById(R.id.Rela1);
         rl2 = findViewById(R.id.Rela2);
@@ -73,14 +75,23 @@ public class DetailsReceivedActivity extends AppCompatActivity {
             rl4.setVisibility(View.VISIBLE);
 
         }
+        infoDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DetailsReceivedActivity.this, DeliverInfoActivity.class);
+                i.putExtra("post", Parcels.wrap(post));
+                startActivity(i);
+            }
+        });
 
-        backbutton_details.setOnClickListener(new View.OnClickListener() {
+
+       /* backbutton_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DetailsReceivedActivity.this,getClass());
                 startActivity(i);
             }
-        });
+        });*/
 
         idpostdet.setText(post.getObjectId());
         expdet.setText(post.getUser().getUsername());

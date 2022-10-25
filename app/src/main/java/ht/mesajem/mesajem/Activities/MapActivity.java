@@ -232,6 +232,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
                                     Post post = Parcels.unwrap(getIntent().getParcelableExtra("post"));
                                     post.put("post",delivery.getObjectId());
+                                    post.put("takePost",1);
 
                                     post.saveInBackground();
                                     //Toast.makeText(MapActivity.this, "DATE +10 " + estimate +" DATE" + today, Toast.LENGTH_SHORT).show();
