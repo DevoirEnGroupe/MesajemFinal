@@ -7,6 +7,7 @@ import com.parse.ParseObject;
 
 import ht.mesajem.mesajem.Models.Delivery;
 import ht.mesajem.mesajem.Models.Post;
+import ht.mesajem.mesajem.Models.User;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
@@ -25,6 +26,7 @@ public class ParseApplication extends Application {
 
         ParseObject.registerSubclass(Post.class);
         ParseObject.registerSubclass(Delivery.class);
+        ParseObject.registerSubclass(User.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("NsErV1akrPT7XrRpg74eMfCaio91oKqzzE8UY5K8")
                 .clientKey("G1jiKrziZDPACQajyDvxxx0PB1fenILzWhZOFh8C")

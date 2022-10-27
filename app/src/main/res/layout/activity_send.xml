@@ -15,8 +15,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="646dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="672dp"
         android:backgroundTint="#F9A826"
         android:text="TAKE A PICTURE"
         android:textColor="@color/black"
@@ -41,14 +41,14 @@
     <RelativeLayout
         android:id="@+id/pic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="434dp"
         android:layout_below="@id/tvDocSend">
 
 
         <ImageView
             android:id="@+id/PostImage"
-            android:layout_width="152dp"
-            android:layout_height="123dp"
+            android:layout_width="136dp"
+            android:layout_height="96dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -59,40 +59,95 @@
         <RelativeLayout
             android:id="@+id/form"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="333dp"
             android:layout_below="@id/PostImage">
 
-            <TextView
-                android:id="@+id/tvimel"
-                android:layout_width="93dp"
-                android:layout_height="20dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="140dp"
-                android:gravity="top"
-                android:text="Reciver Email"
-                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvaddresse"
-                android:layout_width="159dp"
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/etadress"
+                android:layout_width="380dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tvaddresse"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="210dp"
-                android:gravity="top"
-                android:text="Reciever Adress"
-                android:textStyle="bold" />
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="30dp"
+                android:hint="Reciever Adress"
+                android:inputType="" />
+
+            <EditText
+                android:id="@+id/etnon"
+                android:layout_width="380dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tvnon"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:text="" />
 
             <TextView
                 android:id="@+id/tvsiyati"
                 android:layout_width="136dp"
                 android:layout_height="20dp"
+                android:layout_below="@+id/etnon"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="65dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="2dp"
                 android:gravity="top"
                 android:text="Instition Name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etsiyati"
+                android:layout_width="380dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tvsiyati"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="30dp"
+                android:hint="Reciever Lastname"
+                android:inputType="" />
+
+            <TextView
+                android:id="@+id/tvimel"
+                android:layout_width="93dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/etsiyati"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:gravity="top"
+                android:text="Reciver Email"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etimel"
+                android:layout_width="380dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tvimel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:hint="Reciver Email"
+                android:text=""/>
+
+
+
+            <TextView
+                android:id="@+id/tvaddresse"
+                android:layout_width="159dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etimel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="2dp"
+                android:gravity="top"
+                android:text="Reciever Adress"
                 android:textStyle="bold" />
 
             <TextView
@@ -100,58 +155,37 @@
                 android:layout_width="244dp"
                 android:layout_height="20dp"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:gravity="top"
-                android:text="Reciever Firstname"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="69dp"
+                android:text="Reciever Fullname"
                 android:textStyle="bold" />
 
-            <AutoCompleteTextView
-                android:id="@+id/etnon"
-                android:layout_width="380dp"
-                android:layout_height="45dp"
+            <TextView
+                android:id="@+id/tvusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="4dp"
+                android:text="Username" />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/etusername"
+                android:layout_width="352dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvusername"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="3dp"
                 android:ems="10"
+                android:hint="Username"
                 android:text="">
+
                 <requestFocus />
             </AutoCompleteTextView>
-
-
-            <EditText
-                android:id="@+id/etsiyati"
-                android:layout_width="380dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="90dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Reciever Lastname"
-                android:inputType="" />
-
-            <EditText
-                android:id="@+id/etimel"
-                android:layout_width="380dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="160dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Reciver Email"
-                android:inputType="" />
-
-            <EditText
-                android:id="@+id/etadress"
-                android:layout_width="380dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="230dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Reciever Adress"
-                android:inputType="" />
-
 
         </RelativeLayout>
 

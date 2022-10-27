@@ -75,7 +75,7 @@ Optional:
 **Flow Navigation** (Screen to Screen)
 *  Login -> Account creation if no log in is available
 * List Service ->
-  •Send ->Document details->localization-payement method ->Home screen
+  •Send ->Document details->localization-payment method ->Home screen
   •Track
   •Received->document details
     

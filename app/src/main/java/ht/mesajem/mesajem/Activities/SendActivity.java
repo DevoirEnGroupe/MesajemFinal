@@ -20,6 +20,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -65,7 +67,9 @@ public class SendActivity extends AppCompatActivity {
     TextView tvsiyati;
     TextView tvimel;
     TextView tvnon;
-    AutoCompleteTextView etnon;
+    TextView tvusername;
+    AutoCompleteTextView etusername;
+    EditText etnon;
     EditText etimel;
     EditText etadress;
     EditText etsiyati;
@@ -77,7 +81,7 @@ public class SendActivity extends AppCompatActivity {
     String toto;
     ArrayList<String> arraylist = new ArrayList<>();
     LocationManager locationManager;
-
+    ParseUser userCurrent = ParseUser.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,13 +97,17 @@ public class SendActivity extends AppCompatActivity {
         btsubmit = findViewById(R.id.btsubmit);
         tvadress = findViewById(R.id.tvaddresse);
         tvsiyati = findViewById(R.id.tvsiyati);
+        tvusername =findViewById(R.id.tvusername);
         tvimel  = findViewById(R.id.tvimel);
         tvnon = findViewById(R.id.tvnon);
         etnon = findViewById(R.id.etnon);
         etimel = findViewById(R.id.etimel);
         etadress =findViewById(R.id.etadress);
         etsiyati = findViewById(R.id.etsiyati);
+        etusername = findViewById(R.id.etusername);
         floatingActionButton = findViewById(R.id.floationB);
+
+
 
 
         ParseQuery<ParseUser> query = ParseUser.getQuery();
@@ -109,14 +117,31 @@ public class SendActivity extends AppCompatActivity {
             if (e == null) {
                 // The query was successful, returns the users that matches
                 // the criteria.
+
+
                 for(ParseUser user1 : users) {
 
-                    toto = user1.getString("Fullname");
+                    toto = user1.getString("username");
                     arraylist.add(toto);
                     //Toast.makeText(this, ""+toto, Toast.LENGTH_SHORT).show();
 
                 }
                 Toast.makeText(this, ""+arraylist, Toast.LENGTH_SHORT).show();
+                try {
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>
+                            (this, android.R.layout.select_dialog_item, arraylist);
+
+                    etusername.setThreshold(1);//will start working from first character
+                    etusername.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
+                    etusername.setTextColor(Color.RED);
+
+                   String usernamet = etusername.getText().toString();
+
+
+                }catch (Exception ex){
+                    Toast.makeText(SendActivity.this, "" +ex.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
 
             } else {
                 // Something went wrong.
@@ -125,18 +150,56 @@ public class SendActivity extends AppCompatActivity {
         });
 
 
-        try {
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                    (this, android.R.layout.select_dialog_item, arraylist);
-
-            etnon.setThreshold(1);//will start working from first character
-            etnon.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
-            etnon.setTextColor(Color.YELLOW);
 
 
-        }catch (Exception e){
-            Toast.makeText(SendActivity.this, "" +e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+
+
+
+
+
+        etnon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String usernamett = etusername.getText().toString();
+                ParseQuery<ParseUser> queryFullname = ParseUser.getQuery();
+                //query.whereEqualTo("email", "email@example.com");
+                 queryFullname.whereEqualTo("username", usernamett );
+
+                queryFullname.findInBackground((users, e) -> {
+
+                    if (e == null) {
+                        // The query was successful, returns the users that matches
+                        // the criteria.
+
+
+                        for(ParseUser fullname : users) {
+
+                            toto = fullname.getString("Fullname");
+
+                            //arraylist.add(toto);
+                            Toast.makeText(SendActivity.this, ""+toto, Toast.LENGTH_SHORT).show();
+
+                        }
+               etnon.setText(toto);
+
+
+                    } else {
+                        // Something went wrong.
+
+                    }
+                });
+
+
+
+
+
+
+
+            }
+        });
+
+
 
 
         ButtonTakePic.setOnClickListener(new View.OnClickListener() {
@@ -183,10 +246,14 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
         savePost(currentUser,photoFile,lastname,firstname,email,addresse);
 
 
+
+
+
         tvadress.setVisibility(View.GONE);
         tvsiyati.setVisibility(View.GONE);
         tvimel.setVisibility(View.GONE);
         tvnon.setVisibility(View.GONE);
+        tvusername.setVisibility(View.GONE);
 
 
         PostImage.setVisibility(View.GONE);
@@ -196,6 +263,7 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
         etadress.setVisibility(View.GONE);
         etsiyati.setVisibility(View.GONE);
         etnon.setVisibility(View.GONE);
+        etusername.setVisibility(View.GONE);
 
         btsubmit.setVisibility(View.GONE);
         Fragment fragment= new PayementFragment();
