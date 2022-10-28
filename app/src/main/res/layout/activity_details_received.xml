@@ -48,9 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView11"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="Deliver Info Check Here ..."
+            android:text="Info Delivery Person"
             android:textColor="@color/Blue"
             android:textStyle="bold" />
 
@@ -85,12 +85,12 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/Rela1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Rela1"
-                android:visibility="gone"
+                android:layout_marginBottom="10dp"
 
-                android:layout_marginBottom="10dp">
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/checkorder1"
@@ -136,11 +136,11 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/Rela2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Rela2"
-                android:visibility="gone"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/checkorder2"
@@ -187,11 +187,11 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/Rela3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Rela3"
-                android:visibility="gone"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/checkorder3"
@@ -237,11 +237,11 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/Rela4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Rela4"
-                android:visibility="gone"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/checkorder4"
@@ -372,5 +372,18 @@
         android:textColor="@color/Orange"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/ThirdRel"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="-10dp"
+        android:layout_toEndOf="@+id/trOrder"
+        android:text="Comfirm Recieved"
+        android:textColor="@color/Blue"
+        android:textStyle="bold"
+        tools:backgroundTint="@color/Jaunce_citron" />
 
 </RelativeLayout>

@@ -69,7 +69,7 @@
                 android:layout_height="45dp"
                 android:layout_below="@+id/tvaddresse"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginEnd="30dp"
                 android:hint="Reciever Adress"
@@ -81,7 +81,7 @@
                 android:layout_height="45dp"
                 android:layout_below="@+id/tvnon"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="30dp"
                 android:ems="10"
@@ -93,7 +93,7 @@
                 android:layout_height="20dp"
                 android:layout_below="@+id/etnon"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="29dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="2dp"
                 android:gravity="top"
                 android:text="Instition Name"
@@ -105,7 +105,7 @@
                 android:layout_height="45dp"
                 android:layout_below="@+id/tvsiyati"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="30dp"
                 android:hint="Reciever Lastname"
@@ -117,7 +117,7 @@
                 android:layout_height="20dp"
                 android:layout_below="@+id/etsiyati"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="2dp"
                 android:gravity="top"
                 android:text="Reciver Email"
@@ -129,13 +129,12 @@
                 android:layout_height="45dp"
                 android:layout_below="@+id/tvimel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="30dp"
                 android:ems="10"
                 android:hint="Reciver Email"
-                android:text=""/>
-
+                android:text="" />
 
 
             <TextView
@@ -144,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/etimel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="26dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="2dp"
                 android:gravity="top"
                 android:text="Reciever Adress"
@@ -169,12 +168,13 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="26dp"
                 android:layout_marginTop="4dp"
-                android:text="Username" />
+                android:text="Username"
+                android:textStyle="bold" />
 
 
             <AutoCompleteTextView
                 android:id="@+id/etusername"
-                android:layout_width="352dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvusername"
                 android:layout_alignParentStart="true"
@@ -205,33 +205,30 @@
 
     <Button
         android:id="@+id/btsubmit"
-        android:layout_width="224dp"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="88dp"
-
-        android:layout_marginEnd="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="11dp"
         android:backgroundTint="@color/teal_700"
-        android:visibility="gone"
         android:text="SUBMIT"
         android:textColor="@color/white"
+        android:visibility="gone"
         app:cornerRadius="15dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floationB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|end"
-        android:layout_marginStart="346dp"
-        android:layout_marginTop="662dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="11dp"
         android:src="@drawable/ic_baseline_photo_camera_24" />
-
-
 
 
 </RelativeLayout>

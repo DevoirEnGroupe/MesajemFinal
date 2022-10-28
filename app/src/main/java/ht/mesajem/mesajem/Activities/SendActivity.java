@@ -83,6 +83,8 @@ public class SendActivity extends AppCompatActivity {
     LocationManager locationManager;
     ParseUser userCurrent = ParseUser.getCurrentUser();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -252,7 +254,7 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
         tvnon.setVisibility(View.GONE);
         tvusername.setVisibility(View.GONE);
 
-
+        floatingActionButton.setVisibility(View.GONE);
         PostImage.setVisibility(View.GONE);
         tvDocSend.setVisibility(View.GONE);
         send_id.setVisibility(View.GONE);

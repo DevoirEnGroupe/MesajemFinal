@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class DetailsReceivedActivity extends AppCompatActivity {
         idpostdet=findViewById(R.id.idpostdet);
         expdet =findViewById(R.id.expdet);
         infoDel = findViewById(R.id.textView10);
+        backbutton_details = findViewById(R.id.backbutton_details);
 
         rl1 = findViewById(R.id.Rela1);
         rl2 = findViewById(R.id.Rela2);
@@ -85,13 +87,13 @@ public class DetailsReceivedActivity extends AppCompatActivity {
         });
 
 
-       /* backbutton_details.setOnClickListener(new View.OnClickListener() {
+        backbutton_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DetailsReceivedActivity.this,getClass());
+                Intent i = new Intent(DetailsReceivedActivity.this,TrackActivity.class);
                 startActivity(i);
             }
-        });*/
+        });
 
         idpostdet.setText(post.getObjectId());
         expdet.setText(post.getUser().getUsername());

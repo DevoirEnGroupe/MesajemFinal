@@ -85,12 +85,12 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
-            android:layout_below="@+id/ivaddress"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="165dp"
-            android:layout_marginTop="62dp"
-            android:layout_marginEnd="152dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="156dp"
+            android:layout_marginEnd="161dp"
+            android:layout_marginBottom="197dp"
             android:text="UPDATE" />
 
 
