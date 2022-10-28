@@ -32,7 +32,7 @@
         android:layout_marginStart="91dp"
         android:layout_marginTop="567dp"
         android:backgroundTint="#F9A826"
-        android:text="kontinye"
+        android:text="Next"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
