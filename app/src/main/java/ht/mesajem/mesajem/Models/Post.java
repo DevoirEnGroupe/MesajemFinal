@@ -18,6 +18,7 @@ public class Post extends ParseObject {
     public static final String KEY_IMAGE ="image";
     public static final String KEY_USER_ID ="iduser";
     public static final String KEY_USER ="user";
+    public static final String KEY_USER_NAME ="username";
     public static final String KEY_PICKUP_DATE ="pickupdate";
     // public static final String KEY_OBJECT_ID = "objectId";
     public static final String KEY_STATUS = "status";
@@ -46,6 +47,14 @@ public class Post extends ParseObject {
     }
     public void setUser(ParseUser user){
         put(KEY_USER, user);
+    }
+
+
+    public String getUsername(){
+        return getString(KEY_USER_NAME);
+    }
+    public void setUsername(String username){
+        put(KEY_USER_NAME, username);
     }
 
     public String getUserid(){

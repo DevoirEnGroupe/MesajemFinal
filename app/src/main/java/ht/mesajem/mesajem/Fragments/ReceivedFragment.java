@@ -109,7 +109,7 @@ public class ReceivedFragment extends Fragment {
         query.include(Post.KEY_USER);
         query.setLimit(20);
         query.addDescendingOrder(Post.KEY_CREATED_AT);
-        query.whereNotEqualTo("iduser",currentUser.getObjectId());
+        query.whereEqualTo("username",currentUser.getUsername());
         query.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {

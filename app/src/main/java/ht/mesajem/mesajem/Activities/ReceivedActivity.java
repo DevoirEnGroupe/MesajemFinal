@@ -50,7 +50,7 @@ public class ReceivedActivity extends AppCompatActivity {
     protected void queryposts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         ParseUser currentUser = ParseUser.getCurrentUser();
-        query.whereNotEqualTo("iduser",currentUser.getObjectId());
+        query.whereEqualTo("username",currentUser.getUsername());
         query.include(Post.KEY_USER);
         query.setLimit(20);
         query.addDescendingOrder(Post.KEY_CREATED_AT);

@@ -135,7 +135,7 @@ public class SendActivity extends AppCompatActivity {
                     etusername.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
                     etusername.setTextColor(Color.RED);
 
-                   String usernamet = etusername.getText().toString();
+                   //String usernamet = etusername.getText().toString();
 
 
                 }catch (Exception ex){
@@ -186,14 +186,9 @@ public class SendActivity extends AppCompatActivity {
 
                     } else {
                         // Something went wrong.
-
+                        Toast.makeText(SendActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
-
-
-
 
 
             }
@@ -243,7 +238,9 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
 
         String firstname = etnon.getText().toString();
 
-        savePost(currentUser,photoFile,lastname,firstname,email,addresse);
+        String username = etusername.getText().toString();
+
+        savePost(currentUser,photoFile,username,firstname,lastname,email,addresse);
 
 
 
@@ -327,7 +324,7 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
 
 
 
-    private void savePost(ParseUser currentUser, File photoFile,String lastname,String firstname,String email,String addresse ) {
+    private void savePost(ParseUser currentUser, File photoFile,String username,String firstname, String lastname,String email,String addresse ) {
         Post post = new Post();
         post.setKeyImage(new ParseFile(photoFile));
         post.setUser(currentUser);
@@ -336,6 +333,7 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
         post.setEmail(email);
         post.setAddresse(addresse);
         post.setUserid(currentUser.getObjectId());
+        post.put("username",username);
 
 
 
@@ -375,6 +373,7 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
                 etadress.setText("");
                 etsiyati.setText("");
                 etnon.setText("");
+                etusername.setText("");
             }
         });
     }
