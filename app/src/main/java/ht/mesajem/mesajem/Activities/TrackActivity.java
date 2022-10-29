@@ -52,9 +52,6 @@ public class TrackActivity extends AppCompatActivity {
 
                 Fragment fragment;
                 switch (item.getItemId()) {
-                    case R.id.action_home:
-                        fragment = new AllActivityFragment();
-                        break;
 
                     case R.id.action_compose:
                         fragment = new ReceivedFragment();
@@ -73,7 +70,7 @@ public class TrackActivity extends AppCompatActivity {
                 return true;
             }
         });
-        bottomNavigation.setSelectedItemId(R.id.action_home);
+        bottomNavigation.setSelectedItemId(R.id.action_compose);
 
 
 

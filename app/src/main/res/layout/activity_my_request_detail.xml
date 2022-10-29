@@ -62,7 +62,7 @@
         android:visibility="gone" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imuserexp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@+id/map"
@@ -70,11 +70,11 @@
         android:layout_marginStart="59dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="108dp"
-        android:layout_toStartOf="@+id/imageView14"
+        android:layout_toStartOf="@+id/imuserrec"
         tools:src="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/imuserrec"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@+id/map"
@@ -84,26 +84,26 @@
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tvuserexp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btproductdeliver"
-        android:layout_below="@+id/imageView9"
+        android:layout_below="@+id/imuserexp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="74dp"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="11dp"
-        android:text="TextView" />
+        />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/tvuserrec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView14"
+        android:layout_below="@+id/imuserrec"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="64dp"
-        android:text="TextView" />
+         />
 
 
 </RelativeLayout>

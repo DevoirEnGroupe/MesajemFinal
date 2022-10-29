@@ -194,7 +194,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
                     // finding and displaying the distance between the current user and the closest store to him
                     double distance = getCurrentUserLocation().distanceInKilometersTo(post.getLocation());
-                    alertDisplayer("The Post !", "It's " + post.getFullname() + ". \n You are " + Math.round (distance * 100.0) / 100.0  + " km from this store.");
+                    alertDisplayer("The Post !", "It's " + post.getFullname() + ". \n You are " + Math.round (distance * 100.0) / 100.0  + " km from this user.");
 
                     // creating a marker in the map showing the closest store to the current user
                     LatLng closestStoreLocation = new LatLng(post.getLocation().getLatitude(), post.getLocation().getLongitude());

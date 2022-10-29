@@ -17,9 +17,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.target.Target;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -71,6 +76,15 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
         final Button orderbutton = findViewById(R.id.btorderpacked);
         final Button onthewaybutton = findViewById(R.id.btontheway);
         final Button deliverbutton = findViewById(R.id.btproductdeliver);
+        final ImageView imuserexp = findViewById(R.id.imuserexp);
+        final ImageView imuserrec = findViewById(R.id.imuserrec);
+        final TextView tvexp = findViewById(R.id.tvuserexp);
+        final TextView tvrec = findViewById(R.id.tvuserrec);
+
+        Glide.with(this).load(post.getUser().getParseFile("picUser")).transform(new FitCenter(), new RoundedCorners(12))
+                .override(Target.SIZE_ORIGINAL).into(imuserexp);
+        tvexp.setText(post.getUser().getString("Fullname"));
+        tvrec.setText(post.getFullname());
 
         if(post.getStatus().equals(0)) {
 
