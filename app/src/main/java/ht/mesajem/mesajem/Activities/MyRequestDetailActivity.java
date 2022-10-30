@@ -81,7 +81,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
         final TextView tvexp = findViewById(R.id.tvuserexp);
         final TextView tvrec = findViewById(R.id.tvuserrec);
 
-        Glide.with(this).load(post.getUser().getParseFile("picUser")).transform(new FitCenter(), new RoundedCorners(12))
+        Glide.with(this).load(post.getUser().getString("picUser")).transform(new FitCenter(), new RoundedCorners(12))
                 .override(Target.SIZE_ORIGINAL).into(imuserexp);
         tvexp.setText(post.getUser().getString("Fullname"));
         tvrec.setText(post.getFullname());
@@ -94,7 +94,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
                 @Override
                 public void onClick(View v) {
 
-                    showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
+                  //  showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
 
                     savePickupdate();
                     saveEstimateDate();
@@ -108,7 +108,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
             onthewaybutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
+                    //showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
                     saveOnthegrounddate();
 
                 }
@@ -122,7 +122,8 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
             deliverbutton .setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
+                    //showarlet("CONGRATULATIONS", "There are no secrets to success. It is the result of preparation, hard work, and learning from failure");
+                    showarlet("CONGRATULATIONS", "Good Job");
                     saveArrivedate();
                 }
             });
@@ -242,7 +243,7 @@ public class MyRequestDetailActivity extends FragmentActivity implements OnMapRe
 
                     // finding and displaying the distance between the current user and the closest store to him
                     double distance = getCurrentUserLocation().distanceInKilometersTo(post.getLocation());
-                    alertDisplayer("The Post !", "It's " + post.getFullname() + ". \n You are " + Math.round(distance * 100.0) / 100.0 + " km from this store.");
+                    alertDisplayer("The Post !", "It's " + post.getFullname() + ". \n You are " + Math.round(distance * 100.0) / 100.0 + " km from this user.");
 
                     // creating a marker in the map showing the closest store to the current user
                     LatLng closestStoreLocation = new LatLng(post.getLocation().getLatitude(), post.getLocation().getLongitude());

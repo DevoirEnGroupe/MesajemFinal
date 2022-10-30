@@ -128,7 +128,7 @@ public class SendActivity extends AppCompatActivity {
                     //Toast.makeText(this, ""+toto, Toast.LENGTH_SHORT).show();
 
                 }
-                Toast.makeText(this, ""+arraylist, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, ""+arraylist, Toast.LENGTH_SHORT).show();
                 try {
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>
                             (this, android.R.layout.select_dialog_item, arraylist);
@@ -340,8 +340,6 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
 
 
 
-
-
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this  , Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(SendActivity.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
         } else {
@@ -368,7 +366,7 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
                     Log.e(TAG, "error while save", e);
                     Toast.makeText(SendActivity.this,"error save", Toast.LENGTH_LONG).show();
                 }
-                Toast.makeText(SendActivity.this,"save image", Toast.LENGTH_LONG).show();
+                Toast.makeText(SendActivity.this,"save Post", Toast.LENGTH_LONG).show();
                 Log.i(TAG,"Save post");
                 PostImage.setImageResource(0);
                 etimel.setText("");

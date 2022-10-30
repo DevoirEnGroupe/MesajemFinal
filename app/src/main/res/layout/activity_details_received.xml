@@ -140,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/checkorder2"
@@ -191,7 +191,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/checkorder3"
@@ -241,7 +241,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/checkorder4"
@@ -374,7 +374,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btConfirm"
         android:layout_width="110dp"
         android:layout_height="60dp"
         android:layout_below="@+id/ThirdRel"
@@ -382,8 +382,9 @@
         android:layout_marginTop="-10dp"
         android:layout_toEndOf="@+id/trOrder"
         android:text="Comfirm Recieved"
-        android:textColor="@color/Blue"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:visibility="visible"
         tools:backgroundTint="@color/Jaunce_citron" />
 
 </RelativeLayout>

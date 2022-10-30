@@ -48,11 +48,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView11"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="Deliver Info Check Here ..."
+            android:text="Info Delivery Person"
             android:textColor="@color/Blue"
-            android:textStyle="bold" />
+            android:textStyle="bold"  />
 
         <TextView
             android:id="@+id/backbutton_details"

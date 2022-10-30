@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.google.maps.android.heatmaps.Gradient;
 
 import org.parceler.Parcels;
 
@@ -24,7 +26,7 @@ public class DetailsReceivedActivity extends AppCompatActivity {
     TextView idpostdet;
     TextView expdet;
     TextView backbutton_details;
-
+    Button btConfirm;
     RelativeLayout rl1;
     RelativeLayout rl2;
     RelativeLayout rl3;
@@ -43,6 +45,7 @@ public class DetailsReceivedActivity extends AppCompatActivity {
         expdet =findViewById(R.id.expdet);
         infoDel = findViewById(R.id.textView10);
         backbutton_details = findViewById(R.id.backbutton_details);
+        btConfirm = findViewById(R.id.btConfirm);
 
         rl1 = findViewById(R.id.Rela1);
         rl2 = findViewById(R.id.Rela2);
@@ -75,8 +78,16 @@ public class DetailsReceivedActivity extends AppCompatActivity {
             rl2.setVisibility(View.VISIBLE);
             rl3.setVisibility(View.VISIBLE);
             rl4.setVisibility(View.VISIBLE);
+            btConfirm.setVisibility(View.VISIBLE);
 
         }
+        btConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(DetailsReceivedActivity.this, "CONGRATULATIONS", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         infoDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
