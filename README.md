@@ -88,9 +88,9 @@ Optional:
 <img src="https://i.imgur.com/GL7ti93.jpg" height=200>
 
 ### [BONUS] Interactive Prototype
-<img src="https://imgur.com/gallery/HJJttc6.gif" width=200  height= 400>
+<img src="https://i.imgur.com/nqG1v8y.gif" width=200  height= 400>
 
-<a href="https://imgur.com/gallery/HJJttc6.gif">https://imgur.com/gallery/HJJttc6.gif</a>
+<a href="https://i.imgur.com/nqG1v8y.gif">https://i.imgur.com/nqG1v8y.gif</a>
 
 
 
